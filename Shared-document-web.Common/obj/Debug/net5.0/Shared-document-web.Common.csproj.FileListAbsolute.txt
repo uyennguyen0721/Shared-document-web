@@ -1,0 +1,12 @@
+D:\ASP.NET  Projects\Shared-document-web\Shared-document-web.Common\bin\Debug\net5.0\Shared-document-web.Common.deps.json
+D:\ASP.NET  Projects\Shared-document-web\Shared-document-web.Common\bin\Debug\net5.0\Shared-document-web.Common.dll
+D:\ASP.NET  Projects\Shared-document-web\Shared-document-web.Common\bin\Debug\net5.0\ref\Shared-document-web.Common.dll
+D:\ASP.NET  Projects\Shared-document-web\Shared-document-web.Common\bin\Debug\net5.0\Shared-document-web.Common.pdb
+D:\ASP.NET  Projects\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.csproj.AssemblyReference.cache
+D:\ASP.NET  Projects\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASP.NET  Projects\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.AssemblyInfoInputs.cache
+D:\ASP.NET  Projects\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.AssemblyInfo.cs
+D:\ASP.NET  Projects\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.csproj.CoreCompileInputs.cache
+D:\ASP.NET  Projects\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.dll
+D:\ASP.NET  Projects\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\ref\Shared-document-web.Common.dll
+D:\ASP.NET  Projects\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.pdb
