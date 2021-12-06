@@ -13,7 +13,7 @@ namespace Shared_document_web.BLL
     using DAL.Models;
     using Shared_document_web.Common.Req;
 
-    public class SubjectSvc: GenericSvc<SubjectRep, Subject>
+    public class SubjectSvc : GenericSvc<SubjectRep, Subject>
     {
         #region -- Overrides --
         public override SingleRsp Read(int id)
