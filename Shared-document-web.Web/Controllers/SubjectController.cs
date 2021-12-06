@@ -36,6 +36,30 @@ namespace Shared_document_web.Web.Controllers
             return Ok(res);
         }
 
+        [HttpPost("create-subject")]
+        public IActionResult CreateSubject([FromBody] SubjectReq req)
+        {
+            var res = _svc.CreateSubject(req);
+
+            return Ok(res);
+        }
+
+        [HttpPut("update-subject")]
+        public IActionResult UpdateSubject([FromBody] SubjectReq req)
+        {
+            var res = _svc.UpdateSubject(req);
+
+            return Ok(res);
+        }
+
+        [HttpDelete("delete-subject")]
+        public IActionResult DeleteSubject(int id)
+        {
+            var res = _svc.DeleteSubject(id);
+
+            return Ok(res);
+        }
+
         private readonly SubjectSvc _svc;
     }
 }
