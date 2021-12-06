@@ -102,9 +102,19 @@ namespace Shared_document_web.BLL
         public SingleRsp ReadBySubject(int id)
         {
             var res = new SingleRsp();
-            var m = _rep.Read(id);
+            var m = _rep.ReadBySubject(id);
             res.Data = m;
             return res;
+        }
+
+        public object GetDocumentInteraction(int id)
+        {
+            return _rep.GetDocumentInteraction(id);
+        }
+
+        public object SearchDocument(String keyword, int page, int size)
+        {
+            return _rep.SearchDocument(keyword, page, size);
         }
         #endregion
     }

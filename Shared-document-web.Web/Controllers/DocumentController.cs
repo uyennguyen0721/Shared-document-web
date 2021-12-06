@@ -60,11 +60,37 @@ namespace Shared_document_web.Web.Controllers
             return Ok(res);
         }
 
+        [HttpPost("check-document")]
+        public IActionResult CheckDocument(int id)
+        {
+            var res = _svc.CheckDocument(id);
+
+            return Ok(res);
+        }
+
         [HttpPost("get-by-subject")]
         public IActionResult getDocumentBySubject([FromBody] SimpleReq req)
         {
             var res = new SingleRsp();
-            res = _svc.Read(req.Id);
+            res = _svc.ReadBySubject(req.Id);
+            return Ok(res);
+        }
+
+        [HttpPost("get-document-interaction")]
+        public IActionResult getDocumentInteraction([FromBody] SimpleReq req)
+        {
+            var res = new SingleRsp();
+            var interaction = _svc.GetDocumentInteraction(req.Id);
+            res.Data = interaction;
+            return Ok(res);
+        }
+
+        [HttpPost("search-document")]
+        public IActionResult SearchDocument([FromBody] SearchDocumentReq req)
+        {
+            var res = new SingleRsp();
+            var pro = _svc.SearchDocument(req.Keyword, req.Page, req.Size);
+            res.Data = pro;
             return Ok(res);
         }
 
