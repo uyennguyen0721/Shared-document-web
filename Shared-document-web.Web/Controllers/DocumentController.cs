@@ -10,14 +10,18 @@ namespace Shared_document_web.Web.Controllers
     using BLL;
     using Common.Rsp;
     using Common.Req;
+    using Microsoft.AspNetCore.Hosting;
+    using System.IO;
+    using Shared_document_web.DAL.Models;
 
     [Route("api/[controller]")]
     [ApiController]
     public class DocumentController : ControllerBase
     {
-        public DocumentController()
+        public DocumentController(IWebHostEnvironment hostEnvironment)
         {
             _svc = new DocumentSvc();
+            _hostEnvironment = hostEnvironment;
         }
 
         [HttpPost("get-by-id")]
@@ -36,18 +40,33 @@ namespace Shared_document_web.Web.Controllers
             return Ok(res);
         }
 
-        //[HttpPost("upload-document")]
-        //public IActionResult UploadDocument([FromBody] DocumentReq req)
-        //{
-        //    var res = _svc.UploadDocument(req);
+        [HttpPost("upload-document")]
+        public IActionResult UploadDocument([FromBody] DocumentReq req)
+        {
+            Document document = new Document();
+            document.DocumentName = req.DocumentName;
+            document.Description = req.Description;
+            document.UploadDate = DateTime.Now;
+            document.IsCheck = false;
+            document.Views = 0;
+            document.DocumentTypeId = req.DocumentTypeId;
+            document.SubjectId = req.SubjectId;
+            document.FileSource = UploadFile(req.FileSource);
+            var res = _svc.UploadDocument(document);
 
-        //    return Ok(res);
-        //}
+            return Ok(res);
+        }
 
         [HttpPut("update-document")]
         public IActionResult UpdateDocument([FromBody] DocumentReq req)
         {
-            var res = _svc.UpdateDocument(req);
+            Document document = new Document();
+            document.DocumentName = req.DocumentName;
+            document.Description = req.Description;
+            document.DocumentTypeId = req.DocumentTypeId;
+            document.SubjectId = req.SubjectId;
+            document.FileSource = UploadFile(req.FileSource);
+            var res = _svc.UpdateDocument(document);
 
             return Ok(res);
         }
@@ -94,6 +113,25 @@ namespace Shared_document_web.Web.Controllers
             return Ok(res);
         }
 
+        private string UploadFile(IFormFile file)
+        {
+            string fileName = null;
+            if (file != null)
+            {
+                string wwwRootPath = _hostEnvironment.WebRootPath;
+                fileName = Path.GetFileNameWithoutExtension(file.FileName);
+                string extension = Path.GetExtension(file.FileName);
+                fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                string filePath = Path.Combine(wwwRootPath + @"/file/", fileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    file.CopyTo(fileStream);
+                }
+            }
+            return fileName;
+        }
+
         private readonly DocumentSvc _svc;
+        private readonly IWebHostEnvironment _hostEnvironment;
     }
 }
