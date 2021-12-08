@@ -52,22 +52,22 @@ namespace Shared_document_web.BLL
         #endregion
 
         #region -- Methods --
-        public SingleRsp CreateDocument(DocumentReq document)
-        {
-            var res = new SingleRsp();
-            Document documents = new Document();
-            documents.DocumentName = documents.DocumentName;
-            documents.Description = documents.Description;
-            documents.UploadDate = DateTime.Now;
-            documents.IsCheck = false;
-            documents.Views = 0;
-            documents.DocumentTypeId = documents.DocumentTypeId;
-            documents.SubjectId = documents.SubjectId;
-            documents.FileSource = documents.FileSource;
+        //public SingleRsp UploadDocument(DocumentReq document)
+        //{
+        //    var res = new SingleRsp();
+        //    Document documents = new Document();
+        //    documents.DocumentName = documents.DocumentName;
+        //    documents.Description = documents.Description;
+        //    documents.UploadDate = DateTime.Now;
+        //    documents.IsCheck = false;
+        //    documents.Views = 0;
+        //    documents.DocumentTypeId = documents.DocumentTypeId;
+        //    documents.SubjectId = documents.SubjectId;
+        //    documents.FileSource = documents.FileSource;
 
-            res = _rep.CreateDocument(documents);
-            return res;
-        }
+        //    res = _rep.UploadDocument(documents);
+        //    return res;
+        //}
 
         public SingleRsp UpdateDocument(DocumentReq document)
         {

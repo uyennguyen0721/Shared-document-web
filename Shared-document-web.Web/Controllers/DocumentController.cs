@@ -39,7 +39,7 @@ namespace Shared_document_web.Web.Controllers
         //[HttpPost("upload-document")]
         //public IActionResult UploadDocument([FromBody] DocumentReq req)
         //{
-        //    var res = _svc.CreateDocument(req);
+        //    var res = _svc.UploadDocument(req);
 
         //    return Ok(res);
         //}
