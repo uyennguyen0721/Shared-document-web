@@ -31,6 +31,8 @@ namespace Shared_document_web.Web
                 configuration.RootPath = "ClientApp/build";
             });
 
+            services.AddHttpContextAccessor();
+
             #region -- Swagger --            
             var inf1 = new OpenApiInfo
             {

@@ -49,7 +49,7 @@ namespace Shared_document_web.DAL
         #endregion
 
         #region -- Methods --
-        public SingleRsp CreateDocument(Document document)
+        public SingleRsp UploadDocument(Document document)
         {
             var res = new SingleRsp();
             using (var context = new sharedwebContext())
