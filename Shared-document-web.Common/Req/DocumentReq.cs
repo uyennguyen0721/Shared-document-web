@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace Shared_document_web.Common.Req
 {
@@ -16,6 +17,6 @@ namespace Shared_document_web.Common.Req
         public int Views { get; set; }
         public int? DocumentTypeId { get; set; }
         public int? SubjectId { get; set; }
-        public string FileSource { get; set; }
+        public IFormFile FileSource { get; set; }
     }
 }

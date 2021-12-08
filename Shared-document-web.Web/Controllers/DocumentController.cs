@@ -13,7 +13,10 @@ namespace Shared_document_web.Web.Controllers
     using Microsoft.AspNetCore.Hosting;
     using System.IO;
     using Shared_document_web.DAL.Models;
+<<<<<<< HEAD
     using Microsoft.AspNetCore.StaticFiles;
+=======
+>>>>>>> uyenn
 
     [Route("api/[controller]")]
     [ApiController]
@@ -57,6 +60,7 @@ namespace Shared_document_web.Web.Controllers
 
             return Ok(res);
         }
+<<<<<<< HEAD
 
         [HttpGet("download-document")]
         public async Task<ActionResult> DownloadFile([FromBody] DocumentReq req)
@@ -78,6 +82,8 @@ namespace Shared_document_web.Web.Controllers
             var bytes = await System.IO.File.ReadAllBytesAsync(filePath);
             return File(bytes, contentType, Path.GetFileName(filePath));
         }
+=======
+>>>>>>> uyenn
 
         [HttpPut("update-document")]
         public IActionResult UpdateDocument([FromBody] DocumentReq req)

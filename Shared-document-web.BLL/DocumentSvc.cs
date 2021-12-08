@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Shared_document_web.Common.Rsp;
 using Shared_document_web.Common.BLL;
 
@@ -11,6 +12,8 @@ namespace Shared_document_web.BLL
     using DAL;
     using DAL.Models;
     using Shared_document_web.Common.Req;
+    using System.IO;
+
     public class DocumentSvc : GenericSvc<DocumentRep, Document>
     {
         #region -- Overrides --
@@ -52,24 +55,24 @@ namespace Shared_document_web.BLL
         #endregion
 
         #region -- Methods --
-        //public SingleRsp UploadDocument(DocumentReq document)
-        //{
-        //    var res = new SingleRsp();
-        //    Document documents = new Document();
-        //    documents.DocumentName = documents.DocumentName;
-        //    documents.Description = documents.Description;
-        //    documents.UploadDate = DateTime.Now;
-        //    documents.IsCheck = false;
-        //    documents.Views = 0;
-        //    documents.DocumentTypeId = documents.DocumentTypeId;
-        //    documents.SubjectId = documents.SubjectId;
-        //    documents.FileSource = documents.FileSource;
+        public SingleRsp UploadDocument(Document document)
+        {
+            var res = new SingleRsp();
+            Document documents = new Document();
+            documents.DocumentName = documents.DocumentName;
+            documents.Description = documents.Description;
+            documents.UploadDate = DateTime.Now;
+            documents.IsCheck = false;
+            documents.Views = 0;
+            documents.DocumentTypeId = documents.DocumentTypeId;
+            documents.SubjectId = documents.SubjectId;
+            documents.FileSource = documents.FileSource;
 
-        //    res = _rep.UploadDocument(documents);
-        //    return res;
-        //}
+            res = _rep.UploadDocument(documents);
+            return res;
+        }
 
-        public SingleRsp UpdateDocument(DocumentReq document)
+        public SingleRsp UpdateDocument(Document document)
         {
             var res = new SingleRsp();
             Document documents = new Document();
