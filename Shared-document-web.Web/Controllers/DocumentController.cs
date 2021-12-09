@@ -14,8 +14,12 @@ namespace Shared_document_web.Web.Controllers
     using System.IO;
     using Shared_document_web.DAL.Models;
 <<<<<<< HEAD
+<<<<<<< HEAD
     using Microsoft.AspNetCore.StaticFiles;
 =======
+>>>>>>> uyenn
+=======
+    using Microsoft.AspNetCore.StaticFiles;
 >>>>>>> uyenn
 
     [Route("api/[controller]")]
@@ -99,6 +103,32 @@ namespace Shared_document_web.Web.Controllers
             return Ok(res);
         }
 
+        [HttpGet("download-document")]
+        public async Task<ActionResult> DownloadDocument(int id)
+        {
+            // validation and get the file
+            Document file = new Document();
+            using (var context = new sharedwebContext())
+            {
+                file = context.Documents.Where(p => p.DocumentId == id).First();
+            }
+            var filePath = $"{file.DocumentName}.{GetFileExtension((int)file.DocumentTypeId)}";
+            //var filePath = $"{id}.{GetFileExtension((int) id)}";
+            if (!System.IO.File.Exists(filePath))
+            {
+                await System.IO.File.WriteAllTextAsync(filePath, "Hello World!");
+            }
+
+            var provider = new FileExtensionContentTypeProvider();
+            if (!provider.TryGetContentType(filePath, out var contentType))
+            {
+                contentType = "application/octet-stream";
+            }
+
+            var bytes = await System.IO.File.ReadAllBytesAsync(filePath);
+            return File(bytes, contentType, Path.GetFileName(filePath));
+        }
+
         [HttpDelete("delete-document")]
         public IActionResult DeleteDocument(int id)
         {
@@ -157,6 +187,34 @@ namespace Shared_document_web.Web.Controllers
                 }
             }
             return fileName;
+        }
+
+        private string GetFileExtension(int typeDoc)
+        {
+            string fileExtension = "";
+            switch (typeDoc)
+            {
+                case 1:
+                    fileExtension = "docx";
+                    break;
+                case 2:
+                    fileExtension = "pdf";
+                    break;
+                case 3:
+                    fileExtension = "pptx";
+                    break;
+                case 4:
+                    fileExtension = "xlsx";
+                    break;
+                case 5:
+                    fileExtension = "pps";
+                    break;
+                default:
+                    fileExtension = "txt";
+                    break;
+            }
+            return fileExtension;
+
         }
 
         private readonly DocumentSvc _svc;
