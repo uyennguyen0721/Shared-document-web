@@ -13,14 +13,7 @@ namespace Shared_document_web.Web.Controllers
     using Microsoft.AspNetCore.Hosting;
     using System.IO;
     using Shared_document_web.DAL.Models;
-<<<<<<< HEAD
-<<<<<<< HEAD
     using Microsoft.AspNetCore.StaticFiles;
-=======
->>>>>>> uyenn
-=======
-    using Microsoft.AspNetCore.StaticFiles;
->>>>>>> uyenn
 
     [Route("api/[controller]")]
     [ApiController]
@@ -64,30 +57,6 @@ namespace Shared_document_web.Web.Controllers
 
             return Ok(res);
         }
-<<<<<<< HEAD
-
-        [HttpGet("download-document")]
-        public async Task<ActionResult> DownloadFile([FromBody] DocumentReq req)
-        {
-            // validation and get the file
-
-            var filePath = $"{req.DocumentName}.txt";
-            if (!System.IO.File.Exists(filePath))
-            {
-                await System.IO.File.WriteAllTextAsync(filePath, "Hello World!");
-            }
-
-            var provider = new FileExtensionContentTypeProvider();
-            if (!provider.TryGetContentType(filePath, out var contentType))
-            {
-                contentType = "application/octet-stream";
-            }
-
-            var bytes = await System.IO.File.ReadAllBytesAsync(filePath);
-            return File(bytes, contentType, Path.GetFileName(filePath));
-        }
-=======
->>>>>>> uyenn
 
         [HttpPut("update-document")]
         public IActionResult UpdateDocument([FromBody] DocumentReq req)

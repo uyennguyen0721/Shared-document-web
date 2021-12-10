@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
-import { Route } from 'react-router';
-import { Layout } from './components/Layout';
-import { Home } from './components/Home';
-import { FetchData } from './components/FetchData';
-import { Counter } from './components/Counter';
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import Header from './components/HeaderComponent/Header'
+import HomePage from './pages/HomePage'
 
-import './custom.css'
+function App() {
+  
 
-export default class App extends Component {
-  static displayName = App.name;
-
-  render () {
-    return (
-      <Layout>
-        <Route exact path='/' component={Home} />
-        <Route path='/counter' component={Counter} />
-        <Route path='/fetch-data' component={FetchData} />
-      </Layout>
-    );
-  }
+  return (
+    <Router>
+      <div className='app'>
+        <Header />
+        
+        <Switch>
+          <Route exact path="/" component={HomePage}/>
+        </Switch>
+      </div>
+    </Router>
+  )
 }
+
+export default App

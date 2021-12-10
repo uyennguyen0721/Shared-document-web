@@ -18,3 +18,23 @@ D:\ASP.NET  Projects\Shared-document-web\Shared-document-web.BLL\obj\Debug\net5.
 D:\ASP.NET  Projects\Shared-document-web\Shared-document-web.BLL\obj\Debug\net5.0\ref\Shared-document-web.BLL.dll
 D:\ASP.NET  Projects\Shared-document-web\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.pdb
 D:\ASP.NET  Projects\Shared-document-web\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.genruntimeconfig.cache
+F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.dll
+F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\obj\Debug\net5.0\ref\Shared-document-web.BLL.dll
+F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.pdb
+F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\bin\Debug\net5.0\Shared-document-web.BLL.deps.json
+F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\bin\Debug\net5.0\Shared-document-web.BLL.runtimeconfig.json
+F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\bin\Debug\net5.0\Shared-document-web.BLL.runtimeconfig.dev.json
+F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\bin\Debug\net5.0\Shared-document-web.BLL.dll
+F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\bin\Debug\net5.0\ref\Shared-document-web.BLL.dll
+F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\bin\Debug\net5.0\Shared-document-web.BLL.pdb
+F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\bin\Debug\net5.0\Shared-document-web.Common.dll
+F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\bin\Debug\net5.0\Shared-document-web.DAL.dll
+F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\bin\Debug\net5.0\Shared-document-web.Common.pdb
+F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\bin\Debug\net5.0\Shared-document-web.DAL.pdb
+F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.csproj.AssemblyReference.cache
+F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.GeneratedMSBuildEditorConfig.editorconfig
+F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.AssemblyInfoInputs.cache
+F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.AssemblyInfo.cs
+F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.csproj.CoreCompileInputs.cache
+F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.csproj.CopyComplete
+F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.genruntimeconfig.cache
