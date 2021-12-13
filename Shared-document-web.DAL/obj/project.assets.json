@@ -6037,20 +6037,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bile2\\.nuget\\packages\\": {}
+    "C:\\Users\\uyenn\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Web Projects\\ReactJS\\Document-Sharing-.NET Core\\Shared-document-web.DAL\\Shared-document-web.DAL.csproj",
+      "projectUniqueName": "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.DAL\\Shared-document-web.DAL.csproj",
       "projectName": "Shared-document-web.DAL",
-      "projectPath": "F:\\Web Projects\\ReactJS\\Document-Sharing-.NET Core\\Shared-document-web.DAL\\Shared-document-web.DAL.csproj",
-      "packagesPath": "C:\\Users\\bile2\\.nuget\\packages\\",
-      "outputPath": "F:\\Web Projects\\ReactJS\\Document-Sharing-.NET Core\\Shared-document-web.DAL\\obj\\",
+      "projectPath": "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.DAL\\Shared-document-web.DAL.csproj",
+      "packagesPath": "C:\\Users\\uyenn\\.nuget\\packages\\",
+      "outputPath": "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.DAL\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\bile2\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\uyenn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -6063,8 +6071,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "F:\\Web Projects\\ReactJS\\Document-Sharing-.NET Core\\Shared-document-web.Common\\Shared-document-web.Common.csproj": {
-              "projectPath": "F:\\Web Projects\\ReactJS\\Document-Sharing-.NET Core\\Shared-document-web.Common\\Shared-document-web.Common.csproj"
+            "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj": {
+              "projectPath": "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj"
             }
           }
         }
@@ -6109,7 +6117,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

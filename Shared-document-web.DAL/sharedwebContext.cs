@@ -31,7 +31,7 @@ namespace Shared_document_web.DAL.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-67AN4PI;Initial Catalog=sharedweb;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS;Initial Catalog=sharedweb;Persist Security Info=True;User ID=sa;Password=123456789;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=True;");
             }
         }
 

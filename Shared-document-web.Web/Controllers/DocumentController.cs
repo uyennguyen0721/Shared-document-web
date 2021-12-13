@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Office.Interop.Word;
 
 namespace Shared_document_web.Web.Controllers
 {
@@ -12,8 +13,10 @@ namespace Shared_document_web.Web.Controllers
     using Common.Req;
     using Microsoft.AspNetCore.Hosting;
     using System.IO;
+    using System.Text;
     using Shared_document_web.DAL.Models;
     using Microsoft.AspNetCore.StaticFiles;
+    using Microsoft.Office.Interop.Excel;
 
     [Route("api/[controller]")]
     [ApiController]
@@ -42,7 +45,7 @@ namespace Shared_document_web.Web.Controllers
         }
 
         [HttpPost("upload-document")]
-        public IActionResult UploadDocument([FromBody] DocumentReq req)
+        public IActionResult UploadDocument([FromForm] DocumentReq req)
         {
             Document document = new Document();
             document.DocumentName = req.DocumentName;
@@ -59,9 +62,10 @@ namespace Shared_document_web.Web.Controllers
         }
 
         [HttpPut("update-document")]
-        public IActionResult UpdateDocument([FromBody] DocumentReq req)
+        public IActionResult UpdateDocument([FromForm] DocumentReq req)
         {
             Document document = new Document();
+            document.DocumentId = req.DocumentId;
             document.DocumentName = req.DocumentName;
             document.Description = req.Description;
             document.DocumentTypeId = req.DocumentTypeId;
@@ -81,11 +85,13 @@ namespace Shared_document_web.Web.Controllers
             {
                 file = context.Documents.Where(p => p.DocumentId == id).First();
             }
-            var filePath = $"{file.DocumentName}.{GetFileExtension((int)file.DocumentTypeId)}";
+            string wwwRootPath = _hostEnvironment.WebRootPath;
+            var filePath = $"{file.FileSource}";
+            string text = await System.IO.File.ReadAllTextAsync(wwwRootPath + @"\file\" + filePath);
             //var filePath = $"{id}.{GetFileExtension((int) id)}";
             if (!System.IO.File.Exists(filePath))
             {
-                await System.IO.File.WriteAllTextAsync(filePath, "Hello World!");
+                await System.IO.File.WriteAllTextAsync(filePath, text);
             }
 
             var provider = new FileExtensionContentTypeProvider();
@@ -149,41 +155,13 @@ namespace Shared_document_web.Web.Controllers
                 fileName = Path.GetFileNameWithoutExtension(file.FileName);
                 string extension = Path.GetExtension(file.FileName);
                 fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
-                string filePath = Path.Combine(wwwRootPath + @"/file/", fileName);
+                string filePath = Path.Combine(wwwRootPath + @"\file\", fileName);
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
                     file.CopyTo(fileStream);
                 }
             }
             return fileName;
-        }
-
-        private string GetFileExtension(int typeDoc)
-        {
-            string fileExtension = "";
-            switch (typeDoc)
-            {
-                case 1:
-                    fileExtension = "docx";
-                    break;
-                case 2:
-                    fileExtension = "pdf";
-                    break;
-                case 3:
-                    fileExtension = "pptx";
-                    break;
-                case 4:
-                    fileExtension = "xlsx";
-                    break;
-                case 5:
-                    fileExtension = "pps";
-                    break;
-                default:
-                    fileExtension = "txt";
-                    break;
-            }
-            return fileExtension;
-
         }
 
         private readonly DocumentSvc _svc;

@@ -59,14 +59,14 @@ namespace Shared_document_web.BLL
         {
             var res = new SingleRsp();
             Document documents = new Document();
-            documents.DocumentName = documents.DocumentName;
-            documents.Description = documents.Description;
+            documents.DocumentName = document.DocumentName;
+            documents.Description = document.Description;
             documents.UploadDate = DateTime.Now;
             documents.IsCheck = false;
             documents.Views = 0;
-            documents.DocumentTypeId = documents.DocumentTypeId;
-            documents.SubjectId = documents.SubjectId;
-            documents.FileSource = documents.FileSource;
+            documents.DocumentTypeId = document.DocumentTypeId;
+            documents.SubjectId = document.SubjectId;
+            documents.FileSource = document.FileSource;
 
             res = _rep.UploadDocument(documents);
             return res;
