@@ -28,7 +28,6 @@ namespace Shared_document_web.Web.Controllers
             return Ok(res);
         }
 
-
         [HttpPost("get-by-all")]
         public IActionResult getAllUsers([FromBody] SimpleReq rep)
         {
