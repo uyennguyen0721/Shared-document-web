@@ -88,6 +88,19 @@ namespace Shared_document_web.BLL
             return res;
         }
 
+        public SingleRsp DownloadDocument(Download download)
+        {
+            var res = new SingleRsp();
+            Download downloads = new Download();
+            downloads.DownloadDate = DateTime.Now;
+            downloads.DocumentId = download.DocumentId;
+            downloads.UserId = download.UserId;
+
+            res = _rep.DownloadDocument(downloads);
+            return res;
+        }
+
+
         public SingleRsp DeleteDocument(int id)
         {
             var res = new SingleRsp();

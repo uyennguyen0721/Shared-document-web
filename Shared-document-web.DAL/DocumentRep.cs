@@ -95,6 +95,30 @@ namespace Shared_document_web.DAL
             return res;
         }
 
+        public SingleRsp DownloadDocument(Download download)
+        {
+            var res = new SingleRsp();
+            using (var context = new sharedwebContext())
+            {
+                using (var tran = context.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        var t = context.Downloads.Add(download);
+                        context.SaveChanges();
+                        tran.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        tran.Rollback();
+                        res.SetError(ex.StackTrace);
+                    }
+                }
+            }
+            return res;
+        }
+
+
         public SingleRsp DeleteDocument(int id)
         {
             var res = new SingleRsp();

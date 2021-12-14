@@ -77,7 +77,7 @@ namespace Shared_document_web.Web.Controllers
         }
 
         [HttpGet("download-document")]
-        public async Task<ActionResult> DownloadDocument(int id)
+        public async Task<ActionResult> DownloadDocument(int id, int userId)
         {
             // validation and get the file
             Document file = new Document();
@@ -99,6 +99,10 @@ namespace Shared_document_web.Web.Controllers
             {
                 contentType = "application/octet-stream";
             }
+            Download download = new Download();
+            download.DocumentId = id;
+            download.UserId = userId;
+            _svc.DownloadDocument(download);
 
             var bytes = await System.IO.File.ReadAllBytesAsync(filePath);
             return File(bytes, contentType, Path.GetFileName(filePath));

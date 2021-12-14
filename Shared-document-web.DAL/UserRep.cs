@@ -53,7 +53,7 @@ namespace Shared_document_web.DAL
             return res;
         }
 
-        public SingleRsp UpdateUser(int userId, string name, string username, string password, string avatar, string email, DateTime? birthday, string gender, int userRoleId)
+        public SingleRsp UpdateUser(int userId, string name, string username, string password, string avatar, string email, DateTime? birthday, string gender)
         {
             var res = new SingleRsp();
             using (var context = new sharedwebContext())
@@ -70,7 +70,6 @@ namespace Shared_document_web.DAL
                         user.Email = email;
                         user.Birthday = birthday;
                         user.Gender = gender;
-                        user.UserRoleId = user.Userrole = userRoleId;
                         var t = context.Users.Update(user);
                         context.SaveChanges();
                         tran.Commit();
@@ -84,6 +83,7 @@ namespace Shared_document_web.DAL
             }
             return res;
         }
+
 
         public object CheckAcc_Linq(String username)
         {

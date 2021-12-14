@@ -24,7 +24,7 @@ namespace Shared_document_web.BLL
             return res;
         }
 
-        public SingleRsp CreateUser(UserReq user)
+        public SingleRsp CreateUser(User user)
         {
             var res = new SingleRsp();
             User users = new User();
@@ -37,11 +37,12 @@ namespace Shared_document_web.BLL
             users.Gender = user.Gender;
             users.IsActive = true;
             users.JoinedDate = DateTime.Now;
-            users.UserRoleId = users.Userrole = (int) user.UserRoleId;
+            users.UserRoleId = users.Userrole = (int)user.UserRoleId;
 
             res = _rep.CreateUser(users);
             return res;
         }
+
         public int DeleteUser(int id)
         {
             return _rep.DeleteUser(id);
@@ -50,10 +51,10 @@ namespace Shared_document_web.BLL
 
         #region -- Methods --
 
-        public SingleRsp UpdateUser(int userId, string name, string username, string password, string avatar, string email, DateTime? birthday, string gender, int userRoleId)
+        public SingleRsp UpdateUser(int userId, string name, string username, string password, string avatar, string email, DateTime? birthday, string gender)
         {
             var res = new SingleRsp();
-            res = _rep.UpdateUser(userId, name, username, password, avatar, email, birthday, gender, userRoleId);
+            res = _rep.UpdateUser(userId, name, username, password, avatar, email, birthday, gender);
             return res;
         }
 

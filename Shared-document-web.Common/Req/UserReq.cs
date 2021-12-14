@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,7 @@ namespace Shared_document_web.Common.Req
         public string Name { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        public string Avatar { get; set; }
+        public IFormFile Avatar { get; set; }
         public string Email { get; set; }
         public DateTime? Birthday { get; set; }
         public string Gender { get; set; }
