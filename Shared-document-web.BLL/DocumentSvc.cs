@@ -59,6 +59,7 @@ namespace Shared_document_web.BLL
             documents.Views = 0;
             documents.DocumentTypeId = document.DocumentTypeId;
             documents.SubjectId = document.SubjectId;
+            documents.UserId = document.UserId;
             documents.ImagePreview = document.ImagePreview;
             documents.FileSource = document.FileSource;
 
