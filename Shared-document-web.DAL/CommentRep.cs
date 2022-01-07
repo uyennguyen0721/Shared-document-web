@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Shared_document_web.Common.DAL;
 
@@ -39,13 +38,6 @@ namespace Shared_document_web.DAL
                         var docName = context.Documents.Where(d => d.DocumentId == comment.DocumentId).First().DocumentName;
                         var t = context.Comments.Add(comment);
 
-                        // Thêm vào lịch sử hoạt động
-                        var history = new History();
-                        history.Time = DateTime.Now;
-                        history.UserId = comment.UserId;
-                        history.Content = userName + " đã bình luận về tài liệu " + docName;
-                        context.Histories.Add(history);
-
                         context.SaveChanges();
                         Task.Delay(500).Wait();
                         tran.Commit();
@@ -73,13 +65,6 @@ namespace Shared_document_web.DAL
                         var docName = context.Documents.Where(d => d.DocumentId == comment.DocumentId).First().DocumentName;
                         var t = context.Comments.Update(comment);
 
-                        // Thêm vào lịch sử hoạt động
-                        var history = new History();
-                        history.Time = DateTime.Now;
-                        history.UserId = comment.UserId;
-                        history.Content = userName + " đã cập nhật lại bình luận về tài liệu " + docName;
-                        context.Histories.Add(history);
-
                         context.SaveChanges();
                         Task.Delay(500).Wait();
                         tran.Commit();
@@ -106,13 +91,6 @@ namespace Shared_document_web.DAL
                         var t = context.Comments.FirstOrDefault(p => p.CommentId == id);
                         var userName = context.Users.Where(u => u.UserId == t.UserId).First().Name;
                         var docName = context.Documents.Where(d => d.DocumentId == t.DocumentId).First().DocumentName;
-
-                        // Thêm vào lịch sử hoạt động
-                        var history = new History();
-                        history.Time = DateTime.Now;
-                        history.UserId = t.UserId;
-                        history.Content = userName + " đã xóa bình luận về tài liệu " + docName;
-                        context.Histories.Add(history);
 
                         context.Comments.Remove(t);
                         context.SaveChanges();

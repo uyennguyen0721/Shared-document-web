@@ -38,6 +38,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\File\" />
     <Folder Include="wwwroot\Avatar\" />
+    <Folder Include="wwwroot\Preview\" />
   </ItemGroup>
 
   <ItemGroup>

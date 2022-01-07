@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Shared_document_web.Common.DAL;
 
@@ -40,13 +39,6 @@ namespace Shared_document_web.DAL
                         var docName = context.Documents.Where(d => d.DocumentId == like.DocumentId).First().DocumentName;
                         var t = context.Likes.Add(like);
 
-                        // Thêm vào lịch sử hoạt động
-                        var history = new History();
-                        history.Time = DateTime.Now;
-                        history.UserId = like.UserId;
-                        history.Content = userName + " đã thích tài liệu " + docName;
-                        context.Histories.Add(history);
-
                         context.SaveChanges();
                         Task.Delay(500).Wait();
                         tran.Commit();
@@ -73,13 +65,6 @@ namespace Shared_document_web.DAL
                         var t = context.Likes.FirstOrDefault(p => p.LikeId == id);
                         var userName = context.Users.Where(u => u.UserId == t.UserId).First().Name;
                         var docName = context.Documents.Where(d => d.DocumentId == t.DocumentId).First().DocumentName;
-
-                        // Thêm vào lịch sử hoạt động
-                        var history = new History();
-                        history.Time = DateTime.Now;
-                        history.UserId = t.UserId;
-                        history.Content = userName + " đã bỏ thích tài liệu " + docName;
-                        context.Histories.Add(history);
 
                         context.Likes.Remove(t);
                         context.SaveChanges();

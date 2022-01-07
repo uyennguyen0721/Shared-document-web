@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Shared_document_web.Web.Controllers
 {
@@ -13,6 +10,8 @@ namespace Shared_document_web.Web.Controllers
     using Microsoft.AspNetCore.Hosting;
     using Shared_document_web.DAL.Models;
     using System.IO;
+    using System.Security.Cryptography;
+    using System.Text;
 
     [Route("api/[controller]")]
     [ApiController]
@@ -56,14 +55,13 @@ namespace Shared_document_web.Web.Controllers
             User user = new User();
             user.Name = req.Name;
             user.Username = req.Username;
-            user.Password = req.Password;
-            user.Avatar = UploadAvatar(req.Avatar);
+            user.Password = Encrypt(req.Password);
             user.Email = req.Email;
             user.Birthday = req.Birthday;
             user.Gender = req.Gender;
             user.IsActive = true;
             user.JoinedDate = DateTime.Now;
-            user.UserRoleId = user.Userrole = (int)req.UserRoleId;
+            user.UserRoleId = (int)req.UserRoleId;
             var res = _svc.CreateUser(user);
 
             return Ok(res);
@@ -76,7 +74,7 @@ namespace Shared_document_web.Web.Controllers
             user.UserId = req.UserId;
             user.Name = req.Name;
             user.Username = req.Username;
-            user.Password = req.Password;
+            user.Password = Encrypt(req.Password);
             user.Avatar = UploadAvatar(req.Avatar);
             user.Email = req.Email;
             user.Birthday = req.Birthday;
@@ -100,7 +98,7 @@ namespace Shared_document_web.Web.Controllers
         public IActionResult CheckAcc_Linq([FromBody] UserReq req)
         {
             var res = new SingleRsp();
-            res.Data = _svc.CheckAcc_Linq(req.Username);
+            res.Data = _svc.CheckAcc_Linq(req.Username, Encrypt(req.Password));
             return Ok(res);
         }
 
@@ -119,10 +117,37 @@ namespace Shared_document_web.Web.Controllers
                     file.CopyTo(fileStream);
                 }
             }
-            return fileName;
+            return "avatar/" + fileName;
+        }
+
+        // mã hóa
+        public static string Encrypt(string toEncrypt)
+        {
+            bool useHashing = true;
+            byte[] keyArray;
+            byte[] toEncryptArray = UTF8Encoding.UTF8.GetBytes(toEncrypt);
+
+            if (useHashing)
+            {
+                MD5CryptoServiceProvider hashmd5 = new MD5CryptoServiceProvider();
+                keyArray = hashmd5.ComputeHash(UTF8Encoding.UTF8.GetBytes(_key));
+            }
+            else
+                keyArray = UTF8Encoding.UTF8.GetBytes(_key);
+
+            TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider();
+            tdes.Key = keyArray;
+            tdes.Mode = CipherMode.ECB;
+            tdes.Padding = PaddingMode.PKCS7;
+
+            ICryptoTransform cTransform = tdes.CreateEncryptor();
+            byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
+
+            return Convert.ToBase64String(resultArray, 0, resultArray.Length);
         }
 
         private readonly UserSvc _svc;
         private readonly IWebHostEnvironment _hostEnvironment;
+        private const string _key = "laptrinhcosodulieu";
     }
 }

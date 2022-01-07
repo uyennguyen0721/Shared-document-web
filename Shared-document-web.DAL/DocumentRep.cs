@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Shared_document_web.Common.DAL;
 
 namespace Shared_document_web.DAL
@@ -117,7 +115,6 @@ namespace Shared_document_web.DAL
             }
             return res;
         }
-
 
         public SingleRsp DeleteDocument(int id)
         {

@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 
 #nullable disable
 
@@ -21,7 +19,6 @@ namespace Shared_document_web.DAL.Models
         public virtual DbSet<Document> Documents { get; set; }
         public virtual DbSet<DocumentType> DocumentTypes { get; set; }
         public virtual DbSet<Download> Downloads { get; set; }
-        public virtual DbSet<History> Histories { get; set; }
         public virtual DbSet<Like> Likes { get; set; }
         public virtual DbSet<Subject> Subjects { get; set; }
         public virtual DbSet<User> Users { get; set; }
@@ -31,6 +28,7 @@ namespace Shared_document_web.DAL.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS;Initial Catalog=sharedweb;Persist Security Info=True;User ID=sa;Password=123456789;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=True;");
             }
         }
@@ -62,15 +60,13 @@ namespace Shared_document_web.DAL.Models
 
                 entity.HasIndex(e => e.SubjectId, "IX_Documents_SubjectId");
 
-                entity.Property(e => e.Description).HasMaxLength(255);
-
-                entity.Property(e => e.DocumentName)
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
+                entity.Property(e => e.DocumentName).HasMaxLength(50);
 
                 entity.Property(e => e.FileSource)
                     .HasMaxLength(255)
                     .HasColumnName("File_source");
+
+                entity.Property(e => e.ImagePreview).HasMaxLength(50);
 
                 entity.Property(e => e.IsCheck).HasColumnName("Is_check");
 
@@ -81,6 +77,10 @@ namespace Shared_document_web.DAL.Models
                 entity.HasOne(d => d.Subject)
                     .WithMany(p => p.Documents)
                     .HasForeignKey(d => d.SubjectId);
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Documents)
+                    .HasForeignKey(d => d.UserId);
             });
 
             modelBuilder.Entity<DocumentType>(entity =>
@@ -100,17 +100,6 @@ namespace Shared_document_web.DAL.Models
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Downloads)
-                    .HasForeignKey(d => d.UserId);
-            });
-
-            modelBuilder.Entity<History>(entity =>
-            {
-                entity.HasIndex(e => e.UserId, "IX_Histories_UserId");
-
-                entity.Property(e => e.Content).HasMaxLength(255);
-
-                entity.HasOne(d => d.User)
-                    .WithMany(p => p.Histories)
                     .HasForeignKey(d => d.UserId);
             });
 

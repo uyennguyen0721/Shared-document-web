@@ -1,9 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Shared_document_web.Common.Req
 {
@@ -22,7 +18,6 @@ namespace Shared_document_web.Common.Req
         public string Gender { get; set; }
         public bool IsActive { get; set; }
         public DateTime JoinedDate { get; set; }
-        public int Userrole { get; set; }
         public int? UserRoleId { get; set; }
     }
 }
