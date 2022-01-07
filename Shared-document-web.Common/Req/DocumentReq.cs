@@ -13,6 +13,7 @@ namespace Shared_document_web.Common.Req
         public int Views { get; set; }
         public int? DocumentTypeId { get; set; }
         public int? SubjectId { get; set; }
+        public int? UserId { get; set; }
         public IFormFile ImagePreview { get; set; }
         public IFormFile FileSource { get; set; }
     }

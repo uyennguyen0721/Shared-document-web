@@ -53,6 +53,7 @@ namespace Shared_document_web.Web.Controllers
             document.SubjectId = req.SubjectId;
             document.ImagePreview = UploadFile(req.ImagePreview, false);
             document.FileSource = UploadFile(req.FileSource, true);
+            document.UserId = req.UserId;
             var res = _svc.UploadDocument(document);
 
             return Ok(res);
