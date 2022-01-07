@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Shared_document_web.Common.Rsp;
 using Shared_document_web.Common.BLL;
 
@@ -11,8 +6,6 @@ namespace Shared_document_web.BLL
 {
     using DAL;
     using DAL.Models;
-    using Shared_document_web.Common.Req;
-    using System.IO;
 
     public class DocumentSvc : GenericSvc<DocumentRep, Document>
     {
@@ -66,6 +59,7 @@ namespace Shared_document_web.BLL
             documents.Views = 0;
             documents.DocumentTypeId = document.DocumentTypeId;
             documents.SubjectId = document.SubjectId;
+            documents.ImagePreview = document.ImagePreview;
             documents.FileSource = document.FileSource;
 
             res = _rep.UploadDocument(documents);

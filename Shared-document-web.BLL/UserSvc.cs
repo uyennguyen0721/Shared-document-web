@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Shared_document_web.Common.Rsp;
 using Shared_document_web.Common.BLL;
 
@@ -10,7 +7,6 @@ namespace Shared_document_web.BLL
 {
     using DAL;
     using DAL.Models;
-    using Shared_document_web.Common.Req;
     public class UserSvc : GenericSvc<UserRep, User>
     {
         #region -- Override --
@@ -31,13 +27,12 @@ namespace Shared_document_web.BLL
             users.Name = user.Name;
             users.Username = user.Username;
             users.Password = user.Password;
-            users.Avatar = user.Avatar;
             users.Email = user.Email;
             users.Birthday = user.Birthday;
             users.Gender = user.Gender;
             users.IsActive = true;
             users.JoinedDate = DateTime.Now;
-            users.UserRoleId = users.Userrole = (int)user.UserRoleId;
+            users.UserRoleId = (int)user.UserRoleId;
 
             res = _rep.CreateUser(users);
             return res;
@@ -77,9 +72,9 @@ namespace Shared_document_web.BLL
             };
             return res;
         }
-        public object CheckAcc_Linq(String username)
+        public object CheckAcc_Linq(String username, String password)
         {
-            return _rep.CheckAcc_Linq(username);
+            return _rep.CheckAcc_Linq(username, password);
         }
         #endregion
     }

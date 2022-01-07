@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Data;
-using System.Text;
-using System.Threading.Tasks;
 using Shared_document_web.Common.DAL;
 
 namespace Shared_document_web.DAL
 {
-    using Models;
     using Common.Rsp;
+    using Shared_document_web.DAL.Models;
+
     public class UserRep : GenericRep<sharedwebContext, User>
     {
         public override User Read(int id)
@@ -85,10 +83,10 @@ namespace Shared_document_web.DAL
         }
 
 
-        public object CheckAcc_Linq(String username)
+        public object CheckAcc_Linq(String username, String password)
         {
             var res = Context.Users
-                .Where(x => x.Username == username)
+                .Where(x => x.Username == username && x.Password == password)
                 .Select(u => new {
                     u.UserId,
                     u.UserRoleId,

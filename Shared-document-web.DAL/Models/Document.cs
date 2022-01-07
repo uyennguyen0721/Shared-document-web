@@ -23,9 +23,12 @@ namespace Shared_document_web.DAL.Models
         public int? DocumentTypeId { get; set; }
         public int? SubjectId { get; set; }
         public string FileSource { get; set; }
+        public int? UserId { get; set; }
+        public string ImagePreview { get; set; }
 
         public virtual DocumentType DocumentType { get; set; }
         public virtual Subject Subject { get; set; }
+        public virtual User User { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual ICollection<Download> Downloads { get; set; }
         public virtual ICollection<Like> Likes { get; set; }

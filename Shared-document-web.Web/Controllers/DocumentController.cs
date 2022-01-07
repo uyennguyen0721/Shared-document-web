@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.Office.Interop.Word;
 
 namespace Shared_document_web.Web.Controllers
 {
@@ -13,10 +11,8 @@ namespace Shared_document_web.Web.Controllers
     using Common.Req;
     using Microsoft.AspNetCore.Hosting;
     using System.IO;
-    using System.Text;
     using Shared_document_web.DAL.Models;
     using Microsoft.AspNetCore.StaticFiles;
-    using Microsoft.Office.Interop.Excel;
 
     [Route("api/[controller]")]
     [ApiController]
@@ -55,7 +51,8 @@ namespace Shared_document_web.Web.Controllers
             document.Views = 0;
             document.DocumentTypeId = req.DocumentTypeId;
             document.SubjectId = req.SubjectId;
-            document.FileSource = UploadFile(req.FileSource);
+            document.ImagePreview = UploadFile(req.ImagePreview, false);
+            document.FileSource = UploadFile(req.FileSource, true);
             var res = _svc.UploadDocument(document);
 
             return Ok(res);
@@ -70,7 +67,8 @@ namespace Shared_document_web.Web.Controllers
             document.Description = req.Description;
             document.DocumentTypeId = req.DocumentTypeId;
             document.SubjectId = req.SubjectId;
-            document.FileSource = UploadFile(req.FileSource);
+            document.ImagePreview = UploadFile(req.ImagePreview, false);
+            document.FileSource = UploadFile(req.FileSource, true);
             var res = _svc.UpdateDocument(document);
 
             return Ok(res);
@@ -150,22 +148,34 @@ namespace Shared_document_web.Web.Controllers
             return Ok(res);
         }
 
-        private string UploadFile(IFormFile file)
+        private string UploadFile(IFormFile file, bool type)
         {
             string fileName = null;
+            string filePath;
             if (file != null)
             {
                 string wwwRootPath = _hostEnvironment.WebRootPath;
                 fileName = Path.GetFileNameWithoutExtension(file.FileName);
                 string extension = Path.GetExtension(file.FileName);
                 fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
-                string filePath = Path.Combine(wwwRootPath + @"\file\", fileName);
+                if (type == true)
+                {
+                    filePath = Path.Combine(wwwRootPath + @"\file\", fileName);
+                }
+                else
+                {
+                    filePath = Path.Combine(wwwRootPath + @"\preview\", fileName);
+                }
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
                     file.CopyTo(fileStream);
                 }
             }
-            return fileName;
+
+            if(type == true)
+                return "file/" + fileName;
+            else
+                return "preview/" + fileName;
         }
 
         private readonly DocumentSvc _svc;
