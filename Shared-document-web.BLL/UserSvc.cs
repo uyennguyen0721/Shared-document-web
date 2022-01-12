@@ -38,6 +38,13 @@ namespace Shared_document_web.BLL
             return res;
         }
 
+        public SingleRsp Login(String username, String password)
+        {
+            var res = new SingleRsp();
+            res = _rep.Login(username, password);
+            return res;
+        }
+
         public int DeleteUser(int id)
         {
             return _rep.DeleteUser(id);

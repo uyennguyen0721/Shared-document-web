@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -17,7 +18,9 @@ namespace Shared_document_web.DAL.Models
 
         public int UserId { get; set; }
         public string Name { get; set; }
+        [Required]
         public string Username { get; set; }
+        [Required]
         public string Password { get; set; }
         public string Avatar { get; set; }
         public string Email { get; set; }

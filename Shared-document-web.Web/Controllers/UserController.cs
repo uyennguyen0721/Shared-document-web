@@ -50,7 +50,7 @@ namespace Shared_document_web.Web.Controllers
 
         // Đăng ký
         [HttpPost("create-user")]
-        public IActionResult CreateUser([FromForm] UserReq req)
+        public IActionResult CreateUser([FromForm] UserRegisterReq req)
         {
             User user = new User();
             user.Name = req.Name;
@@ -61,9 +61,16 @@ namespace Shared_document_web.Web.Controllers
             user.Gender = req.Gender;
             user.IsActive = true;
             user.JoinedDate = DateTime.Now;
-            user.UserRoleId = (int)req.UserRoleId;
+            user.UserRoleId = 2;
             var res = _svc.CreateUser(user);
 
+            return Ok(res);
+        }
+
+        [HttpPost("login")]
+        public IActionResult login([FromForm] UserLoginReq req)
+        {
+            var res = _svc.Login(req.Username, req.Password);
             return Ok(res);
         }
 

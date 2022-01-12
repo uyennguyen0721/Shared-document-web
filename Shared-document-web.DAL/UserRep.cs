@@ -38,6 +38,26 @@ namespace Shared_document_web.DAL
             return res;
         }
 
+        public SingleRsp Login(String username, String password)
+        {
+            var res = new SingleRsp();
+            using (var context = new sharedwebContext())
+            {
+                using (var tran = context.Database.BeginTransaction())
+                {
+                    var user = base.All.FirstOrDefault(u => u.Username.Equals(username) && u.Password.Equals(password));
+                    if(user != null)
+                    {
+                        res.SetData("200",user);
+                    } else
+                    {
+                        res.SetData("404", "Incorrect password or usename");
+                    }
+                }
+            }
+            return res;
+        }
+
         public int DeleteUser(int id)
         {
             var res = 0;

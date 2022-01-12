@@ -1,27 +1,23 @@
 import React, {memo} from 'react'
 import './SearchBar.css'
-import {useForm} from 'react-hook-form'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from "@fortawesome/free-solid-svg-icons"
+import { useLocation } from 'react-router-dom'
 
 function SearchBar({scrollDown, scrollDownStyle}) {
-    const { register, handleSubmit} = useForm()
-
-    const onsubmit = (data) => {
-        console.log(data)
-    }
+    const path = useLocation()
 
     return (
         <div className='search-bar-form'>
-            <form onSubmit={handleSubmit(onsubmit)} >
+            <form action='/search' autoComplete='off' >
                 <input 
-                    {...register('search', {required: true})}
-                    className={`input-seach-form ${scrollDown && 'scroll-down-bar'}`}
+                    className={`input-seach-form ${(scrollDown || path.pathname !== '/') && 'scroll-down-bar'}`}
                     placeholder='Tìm tài liệu...'
                     required
-                    style={scrollDown ? scrollDownStyle : {}}
+                    style={(scrollDown || path.pathname !== '/') ? scrollDownStyle : {}}
+                    name="keyword"
                 />
-                <button type='submit' id='search-btn' style={scrollDown ? scrollDownStyle : {}}><FontAwesomeIcon icon={faSearch} /></button>
+                <button type='submit' id='search-btn' style={(scrollDown || path.pathname !== '/') ? scrollDownStyle : {}}><FontAwesomeIcon icon={faSearch} /></button>
             </form>
         </div>
     )

@@ -42,8 +42,9 @@ header {
     width: 33.333%;
 }
 
-.nav-user > a {
+.nav-user > a, .nav-user > span {
     margin: 0 10px;
+    color: #fff;
 }
 
 #upload-btn {
@@ -61,13 +62,13 @@ header {
     background-color: var(--secondary_color);
 }
 
-.nav-user > a {
+.nav-user > a, .nav-user > span {
     font-size: 14px;
     transition: 0.2s;
     cursor: pointer;
 }
 
-.nav-user > a:hover {
+.nav-user > a:hover, .nav-user > span:hover {
     color: var(--primary_color);
 }
 
@@ -77,7 +78,7 @@ header {
     box-shadow: 0 4px 10px -2px rgb(54, 54, 54);
 }
 
-a.scroll-down:hover {
+a.scroll-down:hover, span.scroll-down:hover {
     color: var(--primary_color);
 }
 
