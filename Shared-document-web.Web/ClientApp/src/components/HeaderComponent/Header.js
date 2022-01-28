@@ -10,12 +10,14 @@ function Header() {
     const path = useLocation()
     const currentUser = useSelector((state) => state.user)
     const dispatch = useDispatch()
-
-    const handleScroll = () => {
-        if (window.pageYOffset > headerBar.current.offsetTop) {
-            setScrollDown(true)
-        } else {
-            setScrollDown(false)
+    let handleScroll
+    if (path.pathname.match(/admin/) == null) {
+       handleScroll = () => {
+            if (window.pageYOffset > headerBar.current.offsetTop) {
+                setScrollDown(true)
+            } else {
+                setScrollDown(false)
+            }
         }
     }
 

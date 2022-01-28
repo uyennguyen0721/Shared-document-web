@@ -1,6 +1,10 @@
 ﻿import { useLocation } from 'react-router-dom'
 import React from 'react'
 import './AdminTaskBar.css'
+import "../../assets/scss/black-dashboard-react.scss";
+import "../../assets/demo/demo.css";
+import "../../assets/css/nucleo-icons.css";
+import 'font-awesome/css/font-awesome.min.css';
 export default function AdminTaskBar() {
     let location = useLocation();
     if (location.pathname.match(/admin/) == null) {
@@ -9,7 +13,7 @@ export default function AdminTaskBar() {
         
     else {
     return (
-        <div className="sidebar" data="blue">
+        <div className="sidebar" data="pink">
             <div className="sidebar-wrapper ps">
                 <div className="logo">
                     <a className="simple-text logo-mini" href="">
@@ -17,7 +21,7 @@ export default function AdminTaskBar() {
                             <img src="/static/media/logo.29970856.png" alt="react-logo"/>
                         </div>
                     </a>
-                    <a className="simple-text logo-normal" href="">HẠNH PHÚC</a>
+                    <a className="simple-text logo-normal" href="">ADMIN</a>
                 </div>
                 <ul className="nav">
                     <li>
@@ -28,14 +32,14 @@ export default function AdminTaskBar() {
                     </li>
                     <li>
                         <a className="nav-link" href="/admin/notifications">
-                            <i className="tim-icons icon-bell-55"></i>
-                            <p>Thông báo</p>
+                            <i className="tim-icons icon-book-bookmark"></i>
+                            <p>Duyệt bài đăng</p>
                         </a>
                     </li>
                     <li>
                         <a className="nav-link" href="/admin/user-profile">
-                            <i className="tim-icons icon-single-02"></i>
-                            <p>Thông tin tài khoản</p>
+                            <i className="tim-icons icon-basket-simple"></i>
+                            <p>Xóa tài khoản vi phạm</p>
                         </a>
                     </li>
                     <li>
@@ -46,20 +50,14 @@ export default function AdminTaskBar() {
                     </li>
                     <li>
                         <a className="nav-link" href="/admin/map">
-                            <i className="tim-icons icon-pin"></i>
-                            <p>Bản đồ</p>
+                            <i className="tim-icons icon-badge"></i>
+                            <p>Thông tin tài khoản</p>
                         </a>
                     </li>
                     <li>
                         <a className="nav-link" href="/admin/tables">
-                            <i className="tim-icons icon-puzzle-10"></i>
-                            <p>Table List</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a className="nav-link" href="/admin/typography">
-                            <i className="tim-icons icon-align-center">
-                            </i><p>Typography</p>
+                            <i className="tim-icons icon-lock-circle"></i>
+                            <p>Thêm tài khoản Admin</p>
                         </a>
                     </li>
                 </ul>

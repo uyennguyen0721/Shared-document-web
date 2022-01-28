@@ -3,12 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router";
 import { useAlert } from 'react-alert'
 import { Button, Card, CardHeader, CardBody, CardFooter, FormGroup, Form, Input, Row, Col, CardText } from "reactstrap";
-import API, { endpoints } from "../../../API";
 import { useState } from "react";
-import cookies from 'react-cookies'
-import { loginUser } from '../../../LoginUser';
 export default function UserProfile() {
-    const admin = useSelector(state => {return state.admin.admin })
     const history = useHistory()
     const alert = useAlert()
     const [address, setAddress] = useState()
@@ -18,9 +14,6 @@ export default function UserProfile() {
     const [idCard, setIdCard] = useState()
     const [year, setYear] = useState()
     const [about, setAbout] = useState()
-    let avatar = admin.avatar.slice(0, admin.avatar.indexOf("/avatar")) + "/static" + admin.avatar.slice(admin.avatar.indexOf("/avatar"), admin.avatar.lenght)
-    const newAvatar = useRef()
-    const dispatch = useDispatch()
     const update = (event) => {
         event.preventDefault()
         let update_user = async () => {
@@ -39,21 +32,7 @@ export default function UserProfile() {
                 formData.append("date_of_birth", year)
             if (about)
                 formData.append("about", about)
-            try {
-                let res = await API.patch(endpoints['User-info'](admin.id), formData, {
-                    headers: {
-                        'Authorization': `Bearer ${cookies.load("access_token")}`,
-                        "Content-Type": "multipart/form-data"
-                    }
-                })
-                let user = await API.get(endpoints['current-user'], {
-                    headers: {
-                        'Authorization': `Bearer ${cookies.load("access_token")}`
-                    }
-                })
-            } catch (err) {
-                console.log(err)
-            }
+          
         }
         let status = '';
         if (!/[^a-zA-Z]/.test(phone) || !/[^a-zA-Z]/.test(year)) {
@@ -69,20 +48,19 @@ export default function UserProfile() {
         else {
             update_user()
             alert.show('Sửa thông tin thành công', { type: 'success' })
-            cookies.save("admin", admin.data)
             history.push("/admin")
         }
     }
     return (
 
         <>
-            <div className="content">
+            <div className="content" id="admin">
                 <Row>
                     <Col md="8">
                         <Form onSubmit={update}>
                             <Card class="card-border">
                                 <CardHeader>
-                                    <h4 className="title">Chỉnh sửa thông tin</h4>
+                                    <h4 className="title">Cập nhập thông tin Admin</h4>
                                 </CardHeader>
                                 <CardBody class="">
 
@@ -90,21 +68,21 @@ export default function UserProfile() {
                                         <Col className="pr-md-1" md="5">
                                             <FormGroup>
                                                 <label>Phân loại</label>
-                                                <Input defaultValue="Khách hàng" disabled type="text"
+                                                <Input defaultValue="Admin quản lý" disabled type="text"
                                                 />
                                             </FormGroup>
                                         </Col>
                                         <Col className="px-md-1" md="3">
                                             <FormGroup>
                                                 <label>Username</label>
-                                                <Input defaultValue={admin.username} placeholder="Tên đăng nhập" type="text" disabled
+                                                <Input defaultValue={"duongadmin98fpt"} placeholder="Tên đăng nhập" type="text" disabled
                                                 />
                                             </FormGroup>
                                         </Col>
                                         <Col className="pl-md-1" md="4">
                                             <FormGroup>
                                                 <label>Địa chỉ email</label>
-                                                <Input defaultValue={admin.email} type="email" disabled />
+                                                <Input defaultValue={"mai989@fpt.com.vn"} type="email" disabled />
                                             </FormGroup>
                                         </Col>
                                     </Row>
@@ -113,7 +91,7 @@ export default function UserProfile() {
                                             <FormGroup>
                                                 <label>Họ</label>
                                                 <Input
-                                                    defaultValue={admin.last_name}
+                                                    defaultValue={"Thái"}
                                                     value={lastName}
                                                     onChange={(event) => setLastName(event.target.value)}
                                                     type="text"
@@ -124,7 +102,7 @@ export default function UserProfile() {
                                             <FormGroup>
                                                 <label> Tên </label>
                                                 <Input
-                                                    defaultValue={admin.first_name}
+                                                    defaultValue={"Thùy Dương"}
                                                     value={firstName}
                                                     onChange={(event) => setFirstName(event.target.value)}
                                                     type="text"
@@ -137,7 +115,7 @@ export default function UserProfile() {
                                             <FormGroup>
                                                 <label>Address</label>
                                                 <Input class="control"
-                                                    defaultValue={admin.address}
+                                                    defaultValue={"1455 Sao Hỏa, Khu Vực 89"}
                                                     value={address}
                                                     onChange={(event) => setAddress(event.target.value)}
                                                     placeholder="Địa chỉ"
@@ -151,14 +129,14 @@ export default function UserProfile() {
                                             <FormGroup>
                                                 <label>Số điện thoại</label>
 
-                                                <Input defaultValue={admin.phone} type="text" value={phone}
+                                                <Input defaultValue={"0959663366"} type="text" value={phone}
                                                     onChange={(event) => setPhone(event.target.value)} />
                                             </FormGroup>
                                         </Col>
                                         <Col className="px-md-1" md="4">
                                             <FormGroup>
                                                 <label>CMND</label>
-                                                <Input defaultValue={admin.id_card} type="text" value={idCard}
+                                                <Input defaultValue={"3256958585"} type="text" value={idCard}
                                                     onChange={(event) => setIdCard(event.target.value)}
                                                 />
                                             </FormGroup>
@@ -166,7 +144,7 @@ export default function UserProfile() {
                                         <Col className="pl-md-1" md="4">
                                             <FormGroup>
                                                 <label>Năm sinh</label>
-                                                <Input type="" defaulValue={admin.date_of_birth} value={year} defaultValue={admin.year}
+                                                <Input type="" defaulValue={"24/05/1998"} value={year} defaultValue={"1998"}
                                                     onChange={(event) => setYear(event.target.value)} />
                                             </FormGroup>
                                         </Col>
@@ -174,13 +152,13 @@ export default function UserProfile() {
                                     <Row>
                                         <Col md="12">
                                             <FormGroup>
-                                                <label>Tự giới thiệu</label>
-                                                <Input
+                                                <label>Nội dung công việc</label>
+                                                <Input UserProfile
                                                     cols="80"
                                                     rows="4"
                                                     type="textarea"
-                                                    defaultValue={admin.about}
-                                                    value={about}
+                                                    defaultValue={""}
+                                                    value={"Duyệt các bài đăng của người dùng, quản lý tài khoản, quản lý bài đăng"}
                                                     onChange={(event) => setAbout(event.target.value)}
                                                 />
                                             </FormGroup>
@@ -209,11 +187,11 @@ export default function UserProfile() {
                                         <img
                                             alt="..."
                                             className="avatar"
-                                            src={avatar}
+                                            src="/"
                                         />
 
                                     </a>
-                                    <h5 className="title">{admin.last_name} {admin.first_name}</h5>
+                                    <h5 className="title">"Thái Thùy Dương"</h5>
                                     <p className="description">Khách hàng/ Costumer</p>
                                 </div>
                                 <div className="card-description">
