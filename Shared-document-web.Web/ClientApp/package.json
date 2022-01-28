@@ -27,7 +27,12 @@
     "reactstrap": "^8.4.1",
     "rimraf": "^2.6.2",
     "styled-components": "^5.3.3",
-    "universal-cookie": "^4.0.4"
+    "universal-cookie": "^4.0.4",
+    "chart.js": "^3.5.1",
+    "react-alert": "^7.0.3",
+    "react-bootstrap": "^1.6.1",
+    "react-chartjs-2": "^3.0.5",
+    "react-cookies": "^0.1.1"
   },
   "devDependencies": {
     "ajv": "^6.9.1",

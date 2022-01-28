@@ -1,0 +1,345 @@
+#admin .form-group.has-danger .error,
+#admin .input-group.has-danger .error {
+    color: $danger-states;
+}
+
+
+#admin .form-group.has-success .error,
+#admin .input-group.has-success .error {
+    color: $success;
+}
+
+@include form-control-lg-padding($padding-lg-vertical, $padding-input-horizontal);
+@include input-base-padding($padding-input-vertical, $padding-input-horizontal);
+
+#admin .form-group.no-border,
+#admin .input-group.no-border {
+    .form-control,
+    .form-control + .input-group-prepend .input-group-text,
+    .form-control + .input-group-append .input-group-text {
+        background-color: lighten($black,1%);
+        border: medium none;
+
+        &:focus,
+        &:active,
+        &:active {
+            border: medium none;
+            background-color: lighten($black,2%);
+        }
+    }
+
+    .form-control {
+        &:focus {
+            & + .input-group-prepend .input-group-text,
+            & + .input-group-append .input-group-text {
+                background-color: lighten($black,2%);
+            }
+        }
+    }
+
+    .input-group-prepend .input-group-text,
+    .input-group-append .input-group-text {
+        background-color: lighten($black,1%);
+        ;
+        border: none;
+    }
+}
+
+#admin .has-error {
+    .form-control-feedback, .control-label {
+        color: $danger-states;
+    }
+}
+#admin .has-success {
+    .form-control-feedback, .control-label {
+        color: $success;
+    }
+}
+
+#admin .input-group-append .input-group-text,
+#admin .input-group-prepend .input-group-text {
+    background-color: transparent;
+    border: 1px solid lighten($black,5%);
+    border-radius: $border-radius-lg;
+    color: $white;
+
+    & i {
+        opacity: .5;
+    }
+
+    @include transition-input-focus-color();
+
+    .has-danger.input-group-focus & {
+        background-color: $transparent-bg;
+    }
+
+    .has-success & {
+        background-color: $transparent-bg;
+    }
+
+    .has-danger .form-control:focus + & {
+        color: $danger-states;
+    }
+
+    .has-success .form-control:focus + & {
+        color: $success;
+    }
+
+    & + .form-control,
+    & ~ .form-control {
+        @include input-size($padding-base-vertical - 1, $padding-base-horizontal);
+        padding-left: 18px;
+    }
+
+    i {
+        width: 17px;
+    }
+}
+
+#admin .input-group-append,
+#admin .input-group-prepend .input-group-text,
+#admin .input-group-prepend .input-group-text {
+    background-color: transparent;
+    border: 1px solid lighten($black,5%);
+    border-radius: $border-radius-lg;
+    color: $white;
+    margin: 0;
+}
+
+#admin .input-group-append .input-group-text {
+    border-left: none;
+}
+#admin .input-group-prepend .input-group-text {
+    border-right: none;
+}
+
+#admin .input-group-focus {
+    .input-group-prepend .input-group-text,
+    .input-group-append .input-group-text {
+        background-color: $white;
+        border-color: $primary;
+        background-color: $transparent-bg;
+        border-color: $primary;
+    }
+
+    &.no-border {
+        .input-group-prepend .input-group-text,
+        .input-group-append .input-group-text {
+            background-color: lighten($black,2%);
+        }
+    }
+}
+
+#admin .input-group,
+#admin .form-group {
+    margin-bottom: 10px;
+    position: relative;
+
+    .form-control-static {
+        margin-top: 9px;
+    }
+}
+
+#admin .input-group[disabled] {
+    .input-group-prepend .input-group-text,
+    .input-group-append .input-group-text {
+        background-color: $light-gray;
+    }
+}
+
+#admin .input-group .form-control:not(:first-child):not(:last-child), #admin .input-group-btn:not(:first-child):not(:last-child) {
+    border-radius: $border-radius-lg;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0 none;
+}
+
+#admin .input-group .form-control:first-child,
+#admin .input-group-btn:first-child > .dropdown-toggle,
+#admin .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+    border-right: 0 none;
+}
+#admin .input-group .form-control:last-child,
+#admin .input-group-btn:last-child > .dropdown-toggle,
+#admin .input-group-btn:first-child > .btn:not(:first-child) {
+    border-left: 0 none;
+}
+#admin .form-control[disabled], #admin .form-control[readonly], #admin fieldset[disabled] .form-control {
+    background-color: $black-states;
+    color: $default;
+    cursor: not-allowed;
+}
+
+#admin .input-group-btn .btn {
+    border-width: $border-thin;
+    padding: $padding-btn-vertical $padding-base-horizontal;
+}
+#admin .input-group-btn .btn-default:not(.btn-fill) {
+    border-color: $medium-gray;
+}
+
+#admin .input-group-btn:last-child > .btn {
+    margin-left: 0;
+}
+
+#admin textarea.form-control {
+    max-width: 100%;
+    max-height: 80px;
+    padding: 10px 10px 0 0;
+    resize: none;
+    line-height: 2;
+}
+
+#admin .has-success,
+#admin .has-danger {
+
+    &.form-group .form-control,
+    &.form-group.no-border .form-control {
+        padding-right: $input-padding-horizontal + 21;
+    }
+}
+
+#admin .form.form-newsletter .form-group {
+    float: left;
+    width: 78%;
+    margin-right: 2%;
+    margin-top: 9px;
+}
+
+#admin .input-group .input-group-btn {
+    padding: 0 12px;
+}
+
+// Input files - hide actual input - requires specific markup in the sample.
+#admin .form-group input[type=file] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+#admin .form-text {
+    font-size: $font-size-sm;
+    color: rgba($white,0.8);
+}
+
+#admin .form-control-lg {
+    padding: 0;
+    font-size: inherit;
+    line-height: 0;
+    border-radius: 0;
+
+    .form-control {
+        height: calc(2.875rem + 2px);
+    }
+}
+
+#admin .form-horizontal {
+    .col-form-label,
+    .label-on-right {
+        padding: 10px 5px 0 15px;
+        text-align: right;
+        max-width: 180px;
+    }
+
+    .checkbox-radios {
+        margin-bottom: 15px;
+
+        .form-check:first-child {
+            margin-top: 8px;
+        }
+    }
+
+    .label-on-right {
+        text-align: left;
+        padding: 10px 15px 0 5px;
+    }
+
+    .form-check-inline {
+        margin-top: 6px;
+
+        .form-check-label {
+            margin-right: 1.5rem;
+        }
+    }
+}
+
+#admin .search-bar {
+    margin-left: $margin-lg-vertical;
+
+    .btn {
+        margin: 0;
+    }
+
+    &.input-group {
+        border-radius: 25px;
+        z-index: 4;
+        margin-bottom: 0;
+        height: 43px;
+        padding-right: 5px;
+
+        .input-group-addon {
+            padding: 10px;
+            background: transparent;
+            border: none;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        i {
+            font-size: 20px;
+            color: $white;
+            margin-top: 0 !important;
+        }
+
+        input {
+            background: transparent;
+            border: none !important;
+            border-radius: 0;
+            padding: 12px !important;
+            font-size: 12px;
+            opacity: 0.5;
+
+            &:focus {
+                background: transparent;
+            }
+        }
+
+        .form-control {
+            opacity: 1;
+            color: $white;
+
+            &::placeholder {
+                color: white;
+            }
+        }
+    }
+}
+
+#admin .modal-search .modal-dialog {
+    max-width: 1000px;
+    margin: 20px auto;
+
+    .form-control {
+        border: none;
+        color: $black;
+
+        &::placeholder {
+            color: $black;
+        }
+    }
+}
+
+#admin .input-group-prepend {
+    margin-right: 0;
+}
+#admin .input-group-prepend,
+#admin .input-group-append {
+    .tim-icons {
+        font-size: $font-paragraph;
+    }
+}

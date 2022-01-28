@@ -52,3 +52,21 @@ F:\Web Projects\ReactJS\Shared Document\Shared-document-web\Shared-document-web.
 F:\Web Projects\ReactJS\Shared Document\Shared-document-web\Shared-document-web.DAL\obj\Debug\net5.0\ref\Shared-document-web.DAL.dll
 F:\Web Projects\ReactJS\Shared Document\Shared-document-web\Shared-document-web.DAL\obj\Debug\net5.0\Shared-document-web.DAL.pdb
 F:\Web Projects\ReactJS\Shared Document\Shared-document-web\Shared-document-web.DAL\obj\Debug\net5.0\Shared-document-web.DAL.genruntimeconfig.cache
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.DAL\bin\Debug\net5.0\Shared-document-web.DAL.deps.json
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.DAL\bin\Debug\net5.0\Shared-document-web.DAL.runtimeconfig.json
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.DAL\bin\Debug\net5.0\Shared-document-web.DAL.runtimeconfig.dev.json
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.DAL\bin\Debug\net5.0\Shared-document-web.DAL.dll
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.DAL\bin\Debug\net5.0\ref\Shared-document-web.DAL.dll
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.DAL\bin\Debug\net5.0\Shared-document-web.DAL.pdb
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.DAL\bin\Debug\net5.0\Shared-document-web.Common.dll
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.DAL\bin\Debug\net5.0\Shared-document-web.Common.pdb
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.DAL\obj\Debug\net5.0\Shared-document-web.DAL.csproj.AssemblyReference.cache
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.DAL\obj\Debug\net5.0\Shared-document-web.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.DAL\obj\Debug\net5.0\Shared-document-web.DAL.AssemblyInfoInputs.cache
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.DAL\obj\Debug\net5.0\Shared-document-web.DAL.AssemblyInfo.cs
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.DAL\obj\Debug\net5.0\Shared-document-web.DAL.csproj.CoreCompileInputs.cache
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.DAL\obj\Debug\net5.0\Shared-document-web.DAL.csproj.CopyComplete
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.DAL\obj\Debug\net5.0\Shared-document-web.DAL.dll
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.DAL\obj\Debug\net5.0\ref\Shared-document-web.DAL.dll
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.DAL\obj\Debug\net5.0\Shared-document-web.DAL.pdb
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.DAL\obj\Debug\net5.0\Shared-document-web.DAL.genruntimeconfig.cache

@@ -34,3 +34,15 @@ F:\Web Projects\ReactJS\Shared Document\Shared-document-web\Shared-document-web.
 F:\Web Projects\ReactJS\Shared Document\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.dll
 F:\Web Projects\ReactJS\Shared Document\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\ref\Shared-document-web.Common.dll
 F:\Web Projects\ReactJS\Shared Document\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.pdb
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.Common\bin\Debug\net5.0\Shared-document-web.Common.deps.json
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.Common\bin\Debug\net5.0\Shared-document-web.Common.dll
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.Common\bin\Debug\net5.0\ref\Shared-document-web.Common.dll
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.Common\bin\Debug\net5.0\Shared-document-web.Common.pdb
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.csproj.AssemblyReference.cache
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.AssemblyInfoInputs.cache
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.AssemblyInfo.cs
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.csproj.CoreCompileInputs.cache
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.dll
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\ref\Shared-document-web.Common.dll
+C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.pdb

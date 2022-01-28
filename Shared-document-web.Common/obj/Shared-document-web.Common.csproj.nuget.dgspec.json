@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Web Projects\\ReactJS\\Shared Document\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj": {}
+    "C:\\Users\\lanph\\Documents\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj": {}
   },
   "projects": {
-    "F:\\Web Projects\\ReactJS\\Shared Document\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj": {
+    "C:\\Users\\lanph\\Documents\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Web Projects\\ReactJS\\Shared Document\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj",
+        "projectUniqueName": "C:\\Users\\lanph\\Documents\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj",
         "projectName": "Shared-document-web.Common",
-        "projectPath": "F:\\Web Projects\\ReactJS\\Shared Document\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj",
-        "packagesPath": "C:\\Users\\bile2\\.nuget\\packages\\",
-        "outputPath": "F:\\Web Projects\\ReactJS\\Shared Document\\Shared-document-web\\Shared-document-web.Common\\obj\\",
+        "projectPath": "C:\\Users\\lanph\\Documents\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj",
+        "packagesPath": "C:\\Users\\lanph\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lanph\\Documents\\Shared-document-web\\Shared-document-web.Common\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\bile2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lanph\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -76,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
         }
       }
     }

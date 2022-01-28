@@ -39,6 +39,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="ClientApp\src\components\NewFolder\" />
     <Folder Include="wwwroot\File\" />
     <Folder Include="wwwroot\Avatar\" />
     <Folder Include="wwwroot\Preview\" />
