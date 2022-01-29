@@ -48,6 +48,15 @@ namespace Shared_document_web.BLL
         #endregion
 
         #region -- Methods --
+
+        public SingleRsp GetDocumentById(int id)
+        {
+            var res = new SingleRsp();
+            var m = _rep.GetDocumentById(id);
+            res.Data = m;
+            return res;
+        }
+
         public SingleRsp UploadDocument(Document document)
         {
             var res = new SingleRsp();

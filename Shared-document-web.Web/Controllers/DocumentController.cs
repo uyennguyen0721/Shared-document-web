@@ -28,7 +28,7 @@ namespace Shared_document_web.Web.Controllers
         public IActionResult getDocumentById([FromBody] SimpleReq req)
         {
             var res = new SingleRsp();
-            res = _svc.Read(req.Id);
+            res = _svc.GetDocumentById(req.Id);
             return Ok(res);
         }
 
