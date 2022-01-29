@@ -21,11 +21,12 @@ import {
   NavbarToggler,
   ModalHeader,
 } from "reactstrap";
-import "../../assets/scss/black-dashboard-react.scss";
-import "../../assets/demo/demo.css";
-import "../../assets/css/nucleo-icons.css";
+import "../assets/scss/black-dashboard-react.scss";
+import "../assets/demo/demo.css";
+import "../assets/css/nucleo-icons.css";
 import 'font-awesome/css/font-awesome.min.css';
 import { useLocation } from 'react-router-dom'
+import avatar from "../../assets/images/avatar.jpg"
 function AdminNavbar(props) {
     const alert = useAlert()
     const history = useHistory()

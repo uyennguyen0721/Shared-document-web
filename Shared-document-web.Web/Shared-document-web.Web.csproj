@@ -39,6 +39,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="ClientApp\src\admin\components\Navbars\" />
     <Folder Include="ClientApp\src\components\NewFolder\" />
     <Folder Include="wwwroot\File\" />
     <Folder Include="wwwroot\Avatar\" />
@@ -55,7 +56,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="ClientApp\src\admin\components\Navbars\AdminNavbar.js">
+    <None Update="ClientApp\src\admin\components\AdminNavbar.js">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
   </ItemGroup>

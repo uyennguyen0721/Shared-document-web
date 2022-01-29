@@ -1,9 +1,8 @@
 ﻿import { useLocation } from 'react-router-dom'
 import React from 'react'
-import './AdminTaskBar.css'
-import "../../assets/scss/black-dashboard-react.scss";
-import "../../assets/demo/demo.css";
-import "../../assets/css/nucleo-icons.css";
+import "../assets/scss/black-dashboard-react.scss";
+import "../assets/demo/demo.css";
+import "../assets/css/nucleo-icons.css";
 import 'font-awesome/css/font-awesome.min.css';
 export default function AdminTaskBar() {
     let location = useLocation();
@@ -16,7 +15,7 @@ export default function AdminTaskBar() {
         <div className="sidebar" data="pink">
             <div className="sidebar-wrapper ps">
                 <div className="logo">
-                    <a className="simple-text logo-mini" href="">
+                    <a className="simple-text logo-mini" href="#">
                         <div className="logo-img">
                             <img src="/static/media/logo.29970856.png" alt="react-logo"/>
                         </div>
@@ -31,15 +30,15 @@ export default function AdminTaskBar() {
                         </a>
                     </li>
                     <li>
-                        <a className="nav-link" href="/admin/notifications">
+                        <a className="nav-link" href="/admin/waiting-document">
                             <i className="tim-icons icon-book-bookmark"></i>
                             <p>Duyệt bài đăng</p>
                         </a>
                     </li>
                     <li>
-                        <a className="nav-link" href="/admin/user-profile">
+                        <a className="nav-link" href="/admin/report-document">
                             <i className="tim-icons icon-basket-simple"></i>
-                            <p>Xóa tài khoản vi phạm</p>
+                            <p>Xóa tài liệu report</p>
                         </a>
                     </li>
                     <li>
@@ -49,15 +48,16 @@ export default function AdminTaskBar() {
                         </a>
                     </li>
                     <li>
-                        <a className="nav-link" href="/admin/map">
+                        <a className="nav-link" href="admin/profile">
                             <i className="tim-icons icon-badge"></i>
                             <p>Thông tin tài khoản</p>
                         </a>
                     </li>
+                 
                     <li>
-                        <a className="nav-link" href="/admin/tables">
-                            <i className="tim-icons icon-lock-circle"></i>
-                            <p>Thêm tài khoản Admin</p>
+                        <a className="nav-link" href="/admin/report-document">
+                            <i className="tim-icons icon-basket-simple"></i>
+                            <p>Xóa tài khoản vi phạm</p>
                         </a>
                     </li>
                 </ul>

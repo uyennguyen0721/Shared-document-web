@@ -4,6 +4,7 @@ import { useHistory } from "react-router";
 import { useAlert } from 'react-alert'
 import { Button, Card, CardHeader, CardBody, CardFooter, FormGroup, Form, Input, Row, Col, CardText } from "reactstrap";
 import { useState } from "react";
+import avatar from "../../assets/images/avatar.jpg"
 export default function UserProfile() {
     const history = useHistory()
     const alert = useAlert()
@@ -56,7 +57,7 @@ export default function UserProfile() {
         <>
             <div className="content" id="admin">
                 <Row>
-                    <Col md="8">
+                    <Col md="8" className="fix">
                         <Form onSubmit={update}>
                             <Card class="card-border">
                                 <CardHeader>
@@ -91,7 +92,7 @@ export default function UserProfile() {
                                             <FormGroup>
                                                 <label>Họ</label>
                                                 <Input
-                                                    defaultValue={"Thái"}
+                                                    defaultValue={"Thúy"}
                                                     value={lastName}
                                                     onChange={(event) => setLastName(event.target.value)}
                                                     type="text"
@@ -102,7 +103,7 @@ export default function UserProfile() {
                                             <FormGroup>
                                                 <label> Tên </label>
                                                 <Input
-                                                    defaultValue={"Thùy Dương"}
+                                                    defaultValue={"Loan"}
                                                     value={firstName}
                                                     onChange={(event) => setFirstName(event.target.value)}
                                                     type="text"
@@ -187,15 +188,26 @@ export default function UserProfile() {
                                         <img
                                             alt="..."
                                             className="avatar"
-                                            src="/"
+                                            src={avatar}
                                         />
 
                                     </a>
-                                    <h5 className="title">"Thái Thùy Dương"</h5>
-                                    <p className="description">Khách hàng/ Costumer</p>
+                                    <h5 className="title">Thúy Loan</h5>
+                                    <p className="description">Admin/ Quản trị viên</p>
                                 </div>
                                 <div className="card-description">
-                                    Chào mừng đến với nhà hàng hạnh phúc. Với nhiều năm kinh nghiệm trong ngành, với phương châm "Hạnh phúc của các bạn là niềm vui của chúng tôi", nhà hàng đã tổ chức thành công hơn 10,000 lễ cưới mang những phong cách riêng, độc đáo chỉ thuộc về chủ nhân của nó. Rất hân hạnh được phục vụ quý khách.,
+                                    <ul>
+                                        <li>Công việc 1</li>
+                                        <li>Công việc 2</li>
+                                        <li>Công việc 1</li>
+                                        <li>Công việc 2</li>
+                                        <li>Công việc 1</li>
+                                        <li>Công việc 2</li>
+                                        <li>Công việc 1</li>
+                                        <li>Công việc 2</li>
+                                        <li>Công việc 1</li>
+                                        <li>Công việc 2</li>
+                                    </ul>
                 </div>
                             </CardBody>
                             <CardFooter>

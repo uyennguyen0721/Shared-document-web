@@ -23,15 +23,15 @@ import {
     chartExample4,
 } from "../variables/charts.js";
 
-function DashBoard(props) {
+function DashBoard() {
     const [bigChartData, setbigChartData] = React.useState("data1");
     const setBgChartData = (name) => {
         setbigChartData(name);
     };
     return (
         <>
-            <div className="content">
-                <Row>
+            <div className="content" id="admin">
+                <Row className ="fix-2">
                     <Col xs="12">
                         <Card className="card-chart">
                             <CardHeader>
@@ -128,7 +128,7 @@ function DashBoard(props) {
                         </Card>
                     </Col>
                 </Row>
-                <Row>
+                <Row className="fix-2">
                     <Col lg="4">
                         <Card className="card-chart">
                             <CardHeader>

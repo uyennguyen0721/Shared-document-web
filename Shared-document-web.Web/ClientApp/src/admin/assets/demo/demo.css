@@ -80,13 +80,13 @@
   margin: 0 auto;
 }
 
-#root .offline-doc .page-header {
+#admin .offline-doc .page-header {
   min-height: 100vh;
   max-height: 999px;
   padding: 0;
   color: #ffffff;
   position: relative; }
-    #root .offline-doc .page-header .page-header-image {
+    #admin .offline-doc .page-header .page-header-image {
         position: absolute;
         background-size: cover;
         background-position: center center;
@@ -94,7 +94,7 @@
         height: 100%;
         z-index: -1;
     }
-    #root .offline-doc .page-header .content-center {
+    #admin .offline-doc .page-header .content-center {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -108,12 +108,12 @@
         width: 100%;
         max-width: 880px;
     }
-    #root .offline-doc .page-header footer {
+    #admin .offline-doc .page-header footer {
         position: absolute;
         bottom: 0;
         width: 100%;
     }
-    #root .offline-doc .page-header .container {
+    #admin .offline-doc .page-header .container {
         height: 100%;
         z-index: 1;
     }
@@ -130,7 +130,7 @@
     margin-bottom: 15px; }
   .offline-doc .page-header .title + h4 {
     margin-top: 10px; }
-#root .offline-doc .page-header:after, .offline-doc .page-header:before {
+#admin .offline-doc .page-header:after, .offline-doc .page-header:before {
     position: absolute;
     z-index: 0;
     width: 100%;

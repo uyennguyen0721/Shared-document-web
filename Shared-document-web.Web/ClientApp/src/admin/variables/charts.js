@@ -47,10 +47,6 @@
     ],
   },
 };
-
-// #########################################
-// // // used inside src/views/Dashboard.js
-// #########################################
 let chartExample1 = {
   data1: (canvas) => {
     let ctx = canvas.getContext("2d");
@@ -397,10 +393,6 @@ let chartExample3 = {
     },
   },
 };
-
-// #########################################
-// // // used inside src/views/Dashboard.js
-// #########################################
 const chartExample4 = {
     data: (canvas) => {
         let ctx = canvas.getContext("2d");

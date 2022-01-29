@@ -71,9 +71,9 @@
  @import "black-dashboard-react/custom/forms.scss";
  @import "black-dashboard-react/custom/images.scss";
  @import "black-dashboard-react/custom/modal.scss";
+@import "black-dashboard-react/custom/tables.scss";
  @import "black-dashboard-react/custom/navbar.scss";
  @import "black-dashboard-react/custom/type.scss";
- @import "black-dashboard-react/custom/tables";
  @import "black-dashboard-react/custom/checkboxes-radio";
  @import "black-dashboard-react/custom/sidebar-and-main-panel.scss";
  @import "black-dashboard-react/custom/misc.scss";
@@ -85,3 +85,14 @@
 @import "black-dashboard-react/custom/cards/card-user";
 @import "black-dashboard-react/custom/cards/card-task";
 @import "black-dashboard-react/custom/cards/card-plain";
+
+
+
+#admin .fix {
+    max-width: 44.6666666667%;
+    margin-left: 22%
+}
+#admin .fix-2 {
+    max-width: 77.6666666667%;
+    margin-left: 20%
+}
