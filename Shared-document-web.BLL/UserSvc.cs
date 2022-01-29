@@ -31,6 +31,7 @@ namespace Shared_document_web.BLL
             users.Birthday = user.Birthday;
             users.Gender = user.Gender;
             users.IsActive = true;
+            users.Avatar = user.Avatar;
             users.JoinedDate = DateTime.Now;
             users.UserRoleId = (int)user.UserRoleId;
 

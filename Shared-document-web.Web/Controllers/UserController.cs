@@ -59,6 +59,7 @@ namespace Shared_document_web.Web.Controllers
             user.Email = req.Email;
             user.Birthday = req.Birthday;
             user.Gender = req.Gender;
+            user.Avatar = UploadAvatar(req.Avatar);
             user.IsActive = true;
             user.JoinedDate = DateTime.Now;
             user.UserRoleId = (int)req.UserRoleId;
@@ -116,8 +117,13 @@ namespace Shared_document_web.Web.Controllers
                 {
                     file.CopyTo(fileStream);
                 }
+
+                return "avatar/" + fileName;
             }
-            return "avatar/" + fileName;
+            else
+            {
+                return fileName;
+            }
         }
 
         // mã hóa
