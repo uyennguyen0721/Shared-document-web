@@ -32,7 +32,7 @@ namespace Shared_document_web.BLL
         {
             var res = new SingleRsp();
 
-            var m1 = m.LikeId > 0 ? _rep.Read(m.LikeId) : null ;
+            var m1 = m.LikeId > 0 ? _rep.Read(m.LikeId) : null;
             if (m1 == null)
             {
                 res.SetError("EZ103", "No data.");

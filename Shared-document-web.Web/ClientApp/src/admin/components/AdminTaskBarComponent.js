@@ -15,12 +15,8 @@ export default function AdminTaskBar() {
         <div className="sidebar" data="pink">
             <div className="sidebar-wrapper ps">
                 <div className="logo">
-                    <a className="simple-text logo-mini" href="#">
-                        <div className="logo-img">
-                            <img src="/static/media/logo.29970856.png" alt="react-logo"/>
-                        </div>
-                    </a>
-                    <a className="simple-text logo-normal" href="">ADMIN</a>
+                    
+                    <a className="simple-text logo-normal" href="">QUẢN LÝ</a>
                 </div>
                 <ul className="nav">
                     <li>
@@ -55,7 +51,7 @@ export default function AdminTaskBar() {
                     </li>
                  
                     <li>
-                        <a className="nav-link" href="/admin/report-document">
+                        <a className="nav-link" href="/admin/report-user">
                             <i className="tim-icons icon-basket-simple"></i>
                             <p>Xóa tài khoản vi phạm</p>
                         </a>

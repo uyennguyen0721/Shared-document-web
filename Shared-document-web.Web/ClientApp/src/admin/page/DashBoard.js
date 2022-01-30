@@ -38,7 +38,7 @@ function DashBoard() {
                                 <Row>
                                     <Col className="text-left" sm="6">
                                         <h5 className="card-category">Theo năm</h5>
-                                        <CardTitle tag="h2">Tổng doanh thu</CardTitle>
+                                        <CardTitle tag="h2">Tổng lượt upload tài liệu</CardTitle>
                                     </Col>
                                     <Col sm="6">
                                         <ButtonGroup
@@ -132,9 +132,9 @@ function DashBoard() {
                     <Col lg="4">
                         <Card className="card-chart">
                             <CardHeader>
-                                <h5 className="card-category">Doanh thu thực đơn</h5>
+                                <h5 className="card-category">Tổng số document theo phân loại</h5>
                                 <CardTitle tag="h3">
-                                    <i className="tim-icons icon-bell-55 text-info" /> Thực đơn
+                                    <i className="tim-icons icon-bell-55 text-info" /> Document
                 </CardTitle>
                             </CardHeader>
                             <CardBody>
@@ -150,10 +150,10 @@ function DashBoard() {
                     <Col lg="4">
                         <Card className="card-chart">
                             <CardHeader>
-                                <h5 className="card-category">Doanh thu thuê sảnh cưới</h5>
+                                <h5 className="card-category">Tổng lượt like</h5>
                                 <CardTitle tag="h3">
                                     <i className="tim-icons icon-delivery-fast text-primary" />{" "}
-                  Sảnh cưới
+                  Like
                 </CardTitle>
                             </CardHeader>
                             <CardBody>
@@ -169,9 +169,9 @@ function DashBoard() {
                     <Col lg="4">
                         <Card className="card-chart">
                             <CardHeader>
-                                <h5 className="card-category">Doanh thu thuê dịch vụ</h5>
+                                <h5 className="card-category">Tổng số lượt bình luận</h5>
                                 <CardTitle tag="h3">
-                                    <i className="tim-icons icon-send text-success" /> Dịch vụ
+                                    <i className="tim-icons icon-send text-success" /> Bình luận
                 </CardTitle>
                             </CardHeader>
                             <CardBody>

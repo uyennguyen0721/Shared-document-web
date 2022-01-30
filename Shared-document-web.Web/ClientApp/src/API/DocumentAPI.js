@@ -5,6 +5,13 @@ class DocumentApi {
         return API.get(`${endpoints['Document']}get-all/`)
     }
 
+    deleteDocument = (id) => {
+        return API.delete(`${endpoints['Document']}delete-document?id=${id}`)
+    }
+
+    checkDocument = (id) => {
+        return API.post(`${endpoints['Document']}check-document?id=${id}`)
+    }
     searchDocument = (keyword) => {
         const req = {
         "page": 1,

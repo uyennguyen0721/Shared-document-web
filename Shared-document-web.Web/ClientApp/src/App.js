@@ -12,6 +12,9 @@ import UserProfile from './admin/page/UserProfile'
 import DashBoard from './admin/page/DashBoard'
 import ListDocument from './admin/page/ListDocument'
 import ReportDocument from './admin/page/ReportDocument'
+import ReportUser from './admin/page/ReportUser'
+
+import 'antd/dist/antd.css';
 function App() {
   
 
@@ -31,6 +34,7 @@ function App() {
                   <Route exact path="/admin/dashboard" component={DashBoard} />
                   <Route exact path="/admin/waiting-document" component={ListDocument} />
                   <Route exact path="/admin/report-document" component={ReportDocument} />
+                  <Route exact path="/admin/report-user" component={ReportUser} />
          </Switch>
 
         <Footer />

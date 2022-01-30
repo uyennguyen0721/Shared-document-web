@@ -6,6 +6,12 @@ class UserApi {
             Headers: 'multipart/form-data'
         });
     }
+    postAllUser = () => {
+        return API.post(`${endpoints['User']}get-by-all/`)
+    }
+    deleteUser = (id) => {
+        return API.delete(`${endpoints['User']}delete-document?id=${id}`)
+    }
 }
 
 const userApi = new UserApi()

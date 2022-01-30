@@ -89,7 +89,7 @@ function AdminNavbar(props) {
                                         nav
                                     >
                                         <div className="notification d-none d-lg-block d-xl-block" />
-                                        <i className="tim-icons icon-sound-wave" />
+                                        <i className="tim-icons icon-sound-wave text-danger" />
                                         <p className="d-lg-none">Thông báo</p>
                                     </DropdownToggle>
                                     <DropdownMenu className="dropdown-navbar" right tag="ul">

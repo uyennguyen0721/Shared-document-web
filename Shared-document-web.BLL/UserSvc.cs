@@ -31,17 +31,11 @@ namespace Shared_document_web.BLL
             users.Birthday = user.Birthday;
             users.Gender = user.Gender;
             users.IsActive = true;
+            users.Avatar = user.Avatar;
             users.JoinedDate = DateTime.Now;
             users.UserRoleId = (int)user.UserRoleId;
 
             res = _rep.CreateUser(users);
-            return res;
-        }
-
-        public SingleRsp Login(String username, String password)
-        {
-            var res = new SingleRsp();
-            res = _rep.Login(username, password);
             return res;
         }
 

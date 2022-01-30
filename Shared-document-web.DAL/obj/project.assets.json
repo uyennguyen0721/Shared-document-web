@@ -5928,23 +5928,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lanph\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lanph\\Documents\\Shared-document-web\\Shared-document-web.DAL\\Shared-document-web.DAL.csproj",
+      "projectUniqueName": "D:\\BT\\Shared-document-web\\Shared-document-web.DAL\\Shared-document-web.DAL.csproj",
       "projectName": "Shared-document-web.DAL",
-      "projectPath": "C:\\Users\\lanph\\Documents\\Shared-document-web\\Shared-document-web.DAL\\Shared-document-web.DAL.csproj",
-      "packagesPath": "C:\\Users\\lanph\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lanph\\Documents\\Shared-document-web\\Shared-document-web.DAL\\obj\\",
+      "projectPath": "D:\\BT\\Shared-document-web\\Shared-document-web.DAL\\Shared-document-web.DAL.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "D:\\BT\\Shared-document-web\\Shared-document-web.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\lanph\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5958,8 +5959,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\lanph\\Documents\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj": {
-              "projectPath": "C:\\Users\\lanph\\Documents\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj"
+            "D:\\BT\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj": {
+              "projectPath": "D:\\BT\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj"
             }
           }
         }

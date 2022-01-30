@@ -46,3 +46,15 @@ C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.Common\obj\Debu
 C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.dll
 C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\ref\Shared-document-web.Common.dll
 C:\Users\lanph\Documents\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.pdb
+D:\BT\Shared-document-web\Shared-document-web.Common\bin\Debug\net5.0\Shared-document-web.Common.deps.json
+D:\BT\Shared-document-web\Shared-document-web.Common\bin\Debug\net5.0\Shared-document-web.Common.dll
+D:\BT\Shared-document-web\Shared-document-web.Common\bin\Debug\net5.0\ref\Shared-document-web.Common.dll
+D:\BT\Shared-document-web\Shared-document-web.Common\bin\Debug\net5.0\Shared-document-web.Common.pdb
+D:\BT\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.csproj.AssemblyReference.cache
+D:\BT\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\BT\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.AssemblyInfoInputs.cache
+D:\BT\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.AssemblyInfo.cs
+D:\BT\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.csproj.CoreCompileInputs.cache
+D:\BT\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.dll
+D:\BT\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\ref\Shared-document-web.Common.dll
+D:\BT\Shared-document-web\Shared-document-web.Common\obj\Debug\net5.0\Shared-document-web.Common.pdb

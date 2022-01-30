@@ -74,7 +74,7 @@ let chartExample1 = {
       ],
       datasets: [
         {
-          label: "Tổng doanh thu năm 2021",
+              label: "Số lượng tài liệu năm 2021",
           fill: true,
           backgroundColor: gradientStroke,
           borderColor: "#1f8ef1",
@@ -119,7 +119,7 @@ let chartExample1 = {
       ],
       datasets: [
         {
-          label: "Doanh thu năm 2020",
+              label: "Số lượng tài liệu năm 2020",
           fill: true,
           backgroundColor: gradientStroke,
           borderColor: "#1f8ef1",
@@ -164,7 +164,7 @@ let chartExample1 = {
       ],
       datasets: [
         {
-          label: "Doanh thu năm 2019",
+              label: "Số lượng tài liệu năm 2019",
           fill: true,
           backgroundColor: gradientStroke,
           borderColor: "#1f8ef1",
@@ -210,7 +210,7 @@ let chartExample1 = {
             ],
             datasets: [
                 {
-                    label: "Doanh thu năm 2018",
+                    label: "Số lượng tài liệu năm 2018",
                     fill: true,
                     backgroundColor: gradientStroke,
                     borderColor: "#1f8ef1",
@@ -249,7 +249,7 @@ let chartExample2 = {
         labels: ["2018", "2019", "2020", "2021"],
       datasets: [
         {
-          label: "Tráng miệng",
+          label: "Văn học",
           fill: true,
           backgroundColor: gradientStroke,
               borderColor: "#d048b6",
@@ -266,7 +266,7 @@ let chartExample2 = {
               data: [80, 100, 70, 80],
           },
           {
-              label: "Món chính",
+              label: "Lịch sử",
               fill: true,
               backgroundColor: gradientStroke,
               borderColor: "#1f8ef1",
@@ -283,7 +283,7 @@ let chartExample2 = {
               data: [60, 80, 65, 130],
           },
           {
-              label: "Khai vị",
+              label: "Ngoại ngữ",
               fill: true,
               backgroundColor: gradientStroke,
               borderColor: "#00d6b4",
@@ -321,18 +321,19 @@ let chartExample3 = {
     return {
       labels: ["2018", "2019", "2020", "2021"],
       datasets: [
-        {
-          label: "Cố điển",
-          fill: true,
-          backgroundColor: gradientStroke,
-          hoverBackgroundColor: gradientStroke,
-          borderColor: "#d048b6",
-          borderWidth: 2,
-          borderDash: [],
-          borderDashOffset: 0.0,
-          data: [53, 70, 55, 70],
-          }, {
-            label: "Hiện đại",
+        //{
+          //label: "Cố điển",
+          //fill: true,
+          //backgroundColor: gradientStroke,
+          //hoverBackgroundColor: gradientStroke,
+          //borderColor: "#d048b6",
+          //borderWidth: 2,
+          //borderDash: [],
+          //borderDashOffset: 0.0,
+          //data: [53, 70, 55, 70],
+          //},
+            {
+            label: "like",
             fill: true,
             backgroundColor: gradientStroke,
             hoverBackgroundColor: gradientStroke,
@@ -407,7 +408,7 @@ const chartExample4 = {
             labels: ["2018", "2019", "2020", "2021"],
             datasets: [
                 {
-                    label: "Trang trí",
+                    label: "Bình luận",
                     fill: true,
                     backgroundColor: gradientStroke,
                     borderColor: "#d048b6",
@@ -421,42 +422,42 @@ const chartExample4 = {
                     pointHoverRadius: 4,
                     pointHoverBorderWidth: 15,
                     pointRadius: 4,
-                    data: [90, 110, 60, 90],
+                    data: [106, 250, 185, 90],
                 },
-                {
-                    label: "Váy cưới",
-                    fill: true,
-                    backgroundColor: gradientStroke,
-                    borderColor: "#1f8ef1",
-                    borderWidth: 2,
-                    borderDash: [],
-                    borderDashOffset: 0.0,
-                    pointBackgroundColor: "#1f8ef1",
-                    pointBorderColor: "rgba(255,255,255,0)",
-                    pointHoverBackgroundColor: "#1f8ef1",
-                    pointBorderWidth: 20,
-                    pointHoverRadius: 4,
-                    pointHoverBorderWidth: 15,
-                    pointRadius: 4,
-                    data: [60, 80, 75, 110],
-                },
-                {
-                    label: "Ca sĩ",
-                    fill: true,
-                    backgroundColor: gradientStroke,
-                    borderColor: "#00d6b4",
-                    borderWidth: 2,
-                    borderDash: [],
-                    borderDashOffset: 0.0,
-                    pointBackgroundColor: "#00d6b4",
-                    pointBorderColor: "rgba(255,255,255,0)",
-                    pointHoverBackgroundColor: "#00d6b4",
-                    pointBorderWidth: 20,
-                    pointHoverRadius: 4,
-                    pointHoverBorderWidth: 15,
-                    pointRadius: 4,
-                    data: [125, 120, 89, 130],
-                }
+                //{
+                //    label: "Váy cưới",
+                //    fill: true,
+                //    backgroundColor: gradientStroke,
+                //    borderColor: "#1f8ef1",
+                //    borderWidth: 2,
+                //    borderDash: [],
+                //    borderDashOffset: 0.0,
+                //    pointBackgroundColor: "#1f8ef1",
+                //    pointBorderColor: "rgba(255,255,255,0)",
+                //    pointHoverBackgroundColor: "#1f8ef1",
+                //    pointBorderWidth: 20,
+                //    pointHoverRadius: 4,
+                //    pointHoverBorderWidth: 15,
+                //    pointRadius: 4,
+                //    data: [60, 80, 75, 110],
+                //},
+                //{
+                //    label: "Ca sĩ",
+                //    fill: true,
+                //    backgroundColor: gradientStroke,
+                //    borderColor: "#00d6b4",
+                //    borderWidth: 2,
+                //    borderDash: [],
+                //    borderDashOffset: 0.0,
+                //    pointBackgroundColor: "#00d6b4",
+                //    pointBorderColor: "rgba(255,255,255,0)",
+                //    pointHoverBackgroundColor: "#00d6b4",
+                //    pointBorderWidth: 20,
+                //    pointHoverRadius: 4,
+                //    pointHoverBorderWidth: 15,
+                //    pointRadius: 4,
+                //    data: [125, 120, 89, 130],
+                //}
             ],
         };
     },

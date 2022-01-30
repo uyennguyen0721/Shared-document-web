@@ -195,20 +195,6 @@ export default function UserProfile() {
                                     <h5 className="title">Thúy Loan</h5>
                                     <p className="description">Admin/ Quản trị viên</p>
                                 </div>
-                                <div className="card-description">
-                                    <ul>
-                                        <li>Công việc 1</li>
-                                        <li>Công việc 2</li>
-                                        <li>Công việc 1</li>
-                                        <li>Công việc 2</li>
-                                        <li>Công việc 1</li>
-                                        <li>Công việc 2</li>
-                                        <li>Công việc 1</li>
-                                        <li>Công việc 2</li>
-                                        <li>Công việc 1</li>
-                                        <li>Công việc 2</li>
-                                    </ul>
-                </div>
                             </CardBody>
                             <CardFooter>
                            
