@@ -39,7 +39,7 @@ namespace Shared_document_web.Web.Controllers
             return Ok(res);
         }
 
-        [HttpPost("get-likes-by-document")]
+        [HttpGet("get-likes-by-document")]
         public IActionResult GetLikesByDocument(int id)
         {
             var res = _svc.GetLikeByDocument(id);

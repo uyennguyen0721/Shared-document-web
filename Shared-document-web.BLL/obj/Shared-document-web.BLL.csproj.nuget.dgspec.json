@@ -1,27 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.BLL\\Shared-document-web.BLL.csproj": {}
+    "D:\\Project\\Shared-document-web\\Shared-document-web.BLL\\Shared-document-web.BLL.csproj": {}
   },
   "projects": {
-    "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.BLL\\Shared-document-web.BLL.csproj": {
+    "D:\\Project\\Shared-document-web\\Shared-document-web.BLL\\Shared-document-web.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.BLL\\Shared-document-web.BLL.csproj",
+        "projectUniqueName": "D:\\Project\\Shared-document-web\\Shared-document-web.BLL\\Shared-document-web.BLL.csproj",
         "projectName": "Shared-document-web.BLL",
-        "projectPath": "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.BLL\\Shared-document-web.BLL.csproj",
-        "packagesPath": "C:\\Users\\uyenn\\.nuget\\packages\\",
-        "outputPath": "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.BLL\\obj\\",
+        "projectPath": "D:\\Project\\Shared-document-web\\Shared-document-web.BLL\\Shared-document-web.BLL.csproj",
+        "packagesPath": "C:\\Users\\bile2\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\Shared-document-web\\Shared-document-web.BLL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\uyenn\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\bile2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -34,11 +28,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj": {
-                "projectPath": "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj"
+              "D:\\Project\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj": {
+                "projectPath": "D:\\Project\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj"
               },
-              "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.DAL\\Shared-document-web.DAL.csproj": {
-                "projectPath": "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.DAL\\Shared-document-web.DAL.csproj"
+              "D:\\Project\\Shared-document-web\\Shared-document-web.DAL\\Shared-document-web.DAL.csproj": {
+                "projectPath": "D:\\Project\\Shared-document-web\\Shared-document-web.DAL\\Shared-document-web.DAL.csproj"
               }
             }
           }
@@ -83,28 +77,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj": {
+    "D:\\Project\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj",
+        "projectUniqueName": "D:\\Project\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj",
         "projectName": "Shared-document-web.Common",
-        "projectPath": "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj",
-        "packagesPath": "C:\\Users\\uyenn\\.nuget\\packages\\",
-        "outputPath": "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.Common\\obj\\",
+        "projectPath": "D:\\Project\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj",
+        "packagesPath": "C:\\Users\\bile2\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\Shared-document-web\\Shared-document-web.Common\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\uyenn\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\bile2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -153,28 +141,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.DAL\\Shared-document-web.DAL.csproj": {
+    "D:\\Project\\Shared-document-web\\Shared-document-web.DAL\\Shared-document-web.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.DAL\\Shared-document-web.DAL.csproj",
+        "projectUniqueName": "D:\\Project\\Shared-document-web\\Shared-document-web.DAL\\Shared-document-web.DAL.csproj",
         "projectName": "Shared-document-web.DAL",
-        "projectPath": "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.DAL\\Shared-document-web.DAL.csproj",
-        "packagesPath": "C:\\Users\\uyenn\\.nuget\\packages\\",
-        "outputPath": "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.DAL\\obj\\",
+        "projectPath": "D:\\Project\\Shared-document-web\\Shared-document-web.DAL\\Shared-document-web.DAL.csproj",
+        "packagesPath": "C:\\Users\\bile2\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\Shared-document-web\\Shared-document-web.DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\uyenn\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\bile2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -187,8 +169,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj": {
-                "projectPath": "D:\\ASP.NET  Projects\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj"
+              "D:\\Project\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj": {
+                "projectPath": "D:\\Project\\Shared-document-web\\Shared-document-web.Common\\Shared-document-web.Common.csproj"
               }
             }
           }
@@ -233,7 +215,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

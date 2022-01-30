@@ -38,3 +38,23 @@ F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\obj\D
 F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.csproj.CoreCompileInputs.cache
 F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.csproj.CopyComplete
 F:\Web Projects\ReactJS\Document-Sharing-.NET Core\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.genruntimeconfig.cache
+D:\Project\Shared-document-web\Shared-document-web.BLL\bin\Debug\net5.0\Shared-document-web.BLL.deps.json
+D:\Project\Shared-document-web\Shared-document-web.BLL\bin\Debug\net5.0\Shared-document-web.BLL.runtimeconfig.json
+D:\Project\Shared-document-web\Shared-document-web.BLL\bin\Debug\net5.0\Shared-document-web.BLL.runtimeconfig.dev.json
+D:\Project\Shared-document-web\Shared-document-web.BLL\bin\Debug\net5.0\Shared-document-web.BLL.dll
+D:\Project\Shared-document-web\Shared-document-web.BLL\bin\Debug\net5.0\ref\Shared-document-web.BLL.dll
+D:\Project\Shared-document-web\Shared-document-web.BLL\bin\Debug\net5.0\Shared-document-web.BLL.pdb
+D:\Project\Shared-document-web\Shared-document-web.BLL\bin\Debug\net5.0\Shared-document-web.Common.dll
+D:\Project\Shared-document-web\Shared-document-web.BLL\bin\Debug\net5.0\Shared-document-web.DAL.dll
+D:\Project\Shared-document-web\Shared-document-web.BLL\bin\Debug\net5.0\Shared-document-web.Common.pdb
+D:\Project\Shared-document-web\Shared-document-web.BLL\bin\Debug\net5.0\Shared-document-web.DAL.pdb
+D:\Project\Shared-document-web\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.csproj.AssemblyReference.cache
+D:\Project\Shared-document-web\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\Shared-document-web\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.AssemblyInfoInputs.cache
+D:\Project\Shared-document-web\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.AssemblyInfo.cs
+D:\Project\Shared-document-web\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.csproj.CoreCompileInputs.cache
+D:\Project\Shared-document-web\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.csproj.CopyComplete
+D:\Project\Shared-document-web\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.dll
+D:\Project\Shared-document-web\Shared-document-web.BLL\obj\Debug\net5.0\ref\Shared-document-web.BLL.dll
+D:\Project\Shared-document-web\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.pdb
+D:\Project\Shared-document-web\Shared-document-web.BLL\obj\Debug\net5.0\Shared-document-web.BLL.genruntimeconfig.cache

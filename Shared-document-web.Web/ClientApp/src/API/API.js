@@ -7,6 +7,7 @@ export let endpoints = {
   User: 'api/User/',
   Subject: 'api/Subject/',
   Comment: 'api/Comment/',
+  Like: 'api/Like/',
 }
 
 const API = axios.create({

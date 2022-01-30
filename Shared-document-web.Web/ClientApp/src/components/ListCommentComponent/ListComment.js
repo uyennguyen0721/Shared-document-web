@@ -10,8 +10,9 @@ import { Button } from '@mui/material'
 
 function ListComment({id}) {
     const [comments,setComment] = useState([])
+    const [reRender, setReRender] = useState(false)
     const cookies = new Cookies()
-    const { register, handleSubmit} = useForm()
+    const { register, handleSubmit, reset} = useForm()
 
     useEffect(() => {
         const getComment = async () => {
@@ -19,10 +20,19 @@ function ListComment({id}) {
             setComment(res.data)
         }
         getComment()
-    },[])
+    },[reRender])
 
-    const onsubmit = (data) => {
-        console.log(data)
+    const onsubmit = async (data) => {
+        data = {
+            ...data,
+            userId: cookies.get('user').userId,
+            documentId: id,
+        }
+        await commenttApi.addComment(data)
+        reset({
+            contents: ''
+        })
+        setReRender((prev) => !prev)
     }
 
     return (
@@ -32,19 +42,20 @@ function ListComment({id}) {
                     <TextareaAutosize
                         aria-label="empty textarea"
                         placeholder="Nhập bình luận"
-                        style={{ width: "100%" }}
-                        class='comment-input'
-                        {...register('content')}
+                        style={{ width: "100%"}}
+                        className='comment-input'
+                        {...register('contents')}
+                        required
                     />
                     <div className='send-btn'>
-                        <Button variant="contained" >Gửi</Button>
+                        <Button variant="contained" type='submit'>Gửi</Button>
                     </div>
                 </form>
             }
             {
                 comments.map((cmt,index) => (
                     <div className='comment-item radius-10' key={index}>
-                        <div>{cmt.userId}</div>
+                        <div>{cmt.userName}</div>
                         <div>{cmt.contents}</div>
                         <div>{moment(cmt.commentDate).fromNow()}</div>
                     </div>

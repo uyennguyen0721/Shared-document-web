@@ -3,12 +3,13 @@ import './DocumentItem.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faDownload, faShare } from "@fortawesome/free-solid-svg-icons"
 import { Link } from 'react-router-dom'
+import { BaseURL } from '../../API/BaseUrl'
 
 
 function DocumentItem({document}) {
     return (
         <div className='document-item radius-10'>
-            <Link to={`/documents/detail/${document.documentId}`}><img src='https://cdn.slidesharecdn.com/ss_thumbnails/trilliondollarcoachslideshare-190415231411-thumbnail-3.jpg?cb=1580173579' alt='document-image'/></Link>
+            <Link to={`/documents/detail/${document.documentId}`}><img src={`${BaseURL}${document.imagePreview}`} alt='document-image'/></Link>
             
             <div className='document-item-info'>
                 <div className='document-item-header'>

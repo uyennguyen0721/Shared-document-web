@@ -47,7 +47,7 @@ namespace Shared_document_web.Web.Controllers
             return Ok(res);
         }
 
-        [HttpPost("get-comments-by-document")]
+        [HttpGet("get-comments-by-document")]
         public IActionResult GetCommentsByDocument(int id)
         {
             var res = _svc.GetCommentsByDocument(id);
