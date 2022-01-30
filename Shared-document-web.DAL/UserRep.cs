@@ -24,9 +24,16 @@ namespace Shared_document_web.DAL
                 {
                     try
                     {
-                        var t = context.Users.Add(user);
-                        context.SaveChanges();
-                        tran.Commit();
+                        if(IsUsernameRepeat(user.Username) == true)
+                        {
+                            var t = context.Users.Add(user);
+                            context.SaveChanges();
+                            tran.Commit();
+                        }
+                        else
+                        {
+                            throw new Exception("Username already used");
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -83,7 +90,7 @@ namespace Shared_document_web.DAL
         }
 
 
-        public object CheckAcc_Linq(String username, String password)
+        public object Login(String username, String password)
         {
             var res = Context.Users
                 .Where(x => x.Username == username && x.Password == password)
@@ -93,6 +100,17 @@ namespace Shared_document_web.DAL
                     u.Password
                 }).ToList();
             return res;
+        }
+
+        /// <summary>
+        /// Kiểm trav trùng username không
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns></returns>
+        public bool IsUsernameRepeat(String username)
+        {
+            var res = Context.Users.Where(u => u.Username.Equals(username)).FirstOrDefault();
+            return res == default;
         }
     }
 }

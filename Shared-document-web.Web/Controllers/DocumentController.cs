@@ -75,7 +75,7 @@ namespace Shared_document_web.Web.Controllers
             return Ok(res);
         }
 
-        [HttpGet("download-document")]
+        [HttpPost("download-document")]
         public async Task<ActionResult> DownloadDocument(int id, int userId)
         {
             // validation and get the file

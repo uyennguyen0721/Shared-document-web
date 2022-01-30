@@ -5,9 +5,6 @@ namespace Shared_document_web.Common.Req
 {
     public class UserReq
     {
-        public int Page { get; set; }
-        public int Size { get; set; }
-        public string Keyword { get; set; }
         public int UserId { get; set; }
         public string Name { get; set; }
         public string Username { get; set; }

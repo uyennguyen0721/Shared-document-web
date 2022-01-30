@@ -8,6 +8,8 @@ namespace Shared_document_web.DAL
 {
     using Models;
     using Common.Rsp;
+    using Shared_document_web.DAL.ViewModels;
+
     public class CommentRep : GenericRep<sharedwebContext, Comment>
     {
         #region -- Overrides --
@@ -106,11 +108,24 @@ namespace Shared_document_web.DAL
             return res;
         }
 
-        public List<Comment> GetCommentsByDocument(int id)
+        public List<CommentViewModel> GetCommentsByDocument(int id)
         {
+            List<CommentViewModel> commentViews = new();
             var context = new sharedwebContext();
             var comments = context.Comments.Where(p => p.DocumentId == id).ToList();
-            return comments;
+            foreach(var comment in comments)
+            {
+                commentViews.Add(new CommentViewModel
+                {
+                    UserName = context.Users.Where(u => u.UserId == comment.UserId).FirstOrDefault().Name,
+                    CommentDate = comment.CommentDate,
+                    CommentId = comment.CommentId,
+                    Contents = comment.Contents,
+                    DocumentName = context.Documents.Where(d => d.DocumentId == comment.DocumentId).FirstOrDefault().DocumentName
+                });
+            }
+
+            return commentViews;
         }
         #endregion
     }
