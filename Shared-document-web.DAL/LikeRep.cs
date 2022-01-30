@@ -8,6 +8,7 @@ namespace Shared_document_web.DAL
 {
     using Models;
     using Common.Rsp;
+    using Shared_document_web.DAL.ViewModels;
 
     public class LikeRep : GenericRep<sharedwebContext, Like>
     {
@@ -80,11 +81,22 @@ namespace Shared_document_web.DAL
             return res;
         }
 
-        public List<Like> GetLikesByDocument(int id)
+        public List<LikeViewModel> GetLikesByDocument(int id)
         {
+            List<LikeViewModel> likeViews = new();
             var context = new sharedwebContext();
-            var like = context.Likes.Where(p => p.DocumentId == id).ToList();
-            return like;
+            var likes = context.Likes.Where(p => p.DocumentId == id).ToList();
+            foreach (var like in likes)
+            {
+                likeViews.Add(new LikeViewModel
+                {
+                    UserName = context.Users.Where(u => u.UserId == like.UserId).FirstOrDefault().Name,
+                    LikeDate = like.LikeDate,
+                    LikeId = like.LikeId,
+                    DocumentName = context.Documents.Where(d => d.DocumentId == like.DocumentId).FirstOrDefault().DocumentName
+                });
+            }
+            return likeViews;
         }
         #endregion
     }

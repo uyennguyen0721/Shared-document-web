@@ -39,15 +39,6 @@ namespace Shared_document_web.Web.Controllers
             return Ok(res);
         }
 
-        [HttpPost("search-user")]
-        public IActionResult SearchUser([FromBody] UserReq req)
-        {
-            var res = new SingleRsp();
-            var pro = _svc.SearchUser(req.Keyword, req.Page, req.Size);
-            res.Data = pro;
-            return Ok(res);
-        }
-
         // Đăng ký
         [HttpPost("create-user")]
         public IActionResult CreateUser([FromForm] UserReq req)
@@ -59,11 +50,11 @@ namespace Shared_document_web.Web.Controllers
             user.Email = req.Email;
             user.Birthday = req.Birthday;
             user.Gender = req.Gender;
+            user.Avatar = UploadAvatar(req.Avatar);
             user.IsActive = true;
             user.JoinedDate = DateTime.Now;
             user.UserRoleId = (int)req.UserRoleId;
             var res = _svc.CreateUser(user);
-
             return Ok(res);
         }
 
@@ -94,11 +85,11 @@ namespace Shared_document_web.Web.Controllers
         }
 
         // Đăng nhập
-        [HttpPost("check-tai-khoan")]
-        public IActionResult CheckAcc_Linq([FromBody] UserReq req)
+        [HttpPost("/login")]
+        public IActionResult Login([FromForm] UserLoginReq req)
         {
             var res = new SingleRsp();
-            res.Data = _svc.CheckAcc_Linq(req.Username, Encrypt(req.Password));
+            res.Data = _svc.Login(req.Username, Encrypt(req.Password));
             return Ok(res);
         }
 
@@ -116,8 +107,13 @@ namespace Shared_document_web.Web.Controllers
                 {
                     file.CopyTo(fileStream);
                 }
+
+                return "avatar/" + fileName;
             }
-            return "avatar/" + fileName;
+            else
+            {
+                return fileName;
+            }
         }
 
         // mã hóa

@@ -31,11 +31,13 @@ namespace Shared_document_web.BLL
             users.Birthday = user.Birthday;
             users.Gender = user.Gender;
             users.IsActive = true;
+            users.Avatar = user.Avatar;
             users.JoinedDate = DateTime.Now;
             users.UserRoleId = (int)user.UserRoleId;
 
             res = _rep.CreateUser(users);
             return res;
+            
         }
 
         public int DeleteUser(int id)
@@ -53,29 +55,11 @@ namespace Shared_document_web.BLL
             return res;
         }
 
-        public object SearchUser(String keyword, int page, int size)
+        public object Login(String username, String password)
         {
-            var pro = All.Where(x => x.Name.Contains(keyword));
-
-            var offset = (page - 1) * size;
-            var total = pro.Count();
-            int totalPages = (total % size) == 0 ? (int)(total / size) : (int)((total / size) + 1);
-            var data = pro.OrderBy(x => x.Name).Skip(offset).Take(size).ToList();
-
-            var res = new
-            {
-                Data = data,
-                TotalRecord = total,
-                TotalPages = totalPages,
-                Page = page,
-                Size = size
-            };
-            return res;
+            return _rep.Login(username, password);
         }
-        public object CheckAcc_Linq(String username, String password)
-        {
-            return _rep.CheckAcc_Linq(username, password);
-        }
+
         #endregion
     }
 }
