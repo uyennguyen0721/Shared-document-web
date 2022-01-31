@@ -1,0 +1,36 @@
+.document-upload-section {
+    padding: 100px 0 60px 0;
+    background-color: #ccc;
+    height: 93vh;
+}
+
+.container-form {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.form-upload {
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.form-upload-input {
+    width: 99% !important;
+    margin: 10px 0 !important;
+}
+
+.select-subject {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.upload-form-table {
+    margin: 20px 0;
+}
+
+#document-file-upload {
+    margin-bottom: 10px;
+}

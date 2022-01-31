@@ -1,0 +1,42 @@
+.list-comment-section {
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.comment-item {
+    background-color: #ccc;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.comment-item > div {
+    margin: 5px 0;
+}
+
+.comment-item > div:first-child {
+    color: var(--primary_color);
+}
+
+.comment-item > div:last-child {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.form-comment {
+    padding: 10px;
+    background-color: #ccc;
+    margin-bottom: 10px;
+}
+
+.comment-input {
+    background-color: #ccc;
+    border: none;
+    resize: none;
+    min-height: 40px;
+}
+
+.send-btn {
+    display: flex;
+    justify-content: flex-end;
+}
