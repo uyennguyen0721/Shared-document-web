@@ -1,0 +1,39 @@
+.recent-document-section {
+    position: relative;
+    margin-top: 360px;
+}
+
+
+.recent-document-container {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    min-height: 70vh;
+}
+
+.recent-document-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.recent-document-header > h1 {
+    color: var(--text_color_primary);
+    margin: 0;
+}
+
+.line-center {
+    height: 1px;
+    width: 73%;
+    background-color: var(--text_color_primary);
+}
+
+.recent-document-header > a {
+    color: var(--primary_color);
+    transition: 0.2s;
+}
+
+.recent-document-header > a:hover {
+    color: var(--secondary_color);
+}
