@@ -59,11 +59,6 @@ namespace Shared_document_web.BLL
             return res;
         }
 
-        public List<DocumentViewModel> GetAllDocuments()
-        {
-            return _rep.GetAllDocuments();
-        }
-
         public SingleRsp UploadDocument(Document document)
         {
             var res = new SingleRsp();

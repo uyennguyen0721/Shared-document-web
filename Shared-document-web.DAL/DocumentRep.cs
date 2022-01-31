@@ -48,33 +48,6 @@ namespace Shared_document_web.DAL
 
         #region -- Methods --
 
-        public List<DocumentViewModel> GetAllDocuments()
-        {
-            List<DocumentViewModel> documentViews = new();
-            using (var context = new sharedwebContext())
-            {
-                var documents = context.Documents.ToList();
-                foreach(var document in documents)
-                {
-                    documentViews.Add(new DocumentViewModel
-                    {
-                        DocumentId = document.DocumentId,
-                        DocumentName = document.DocumentName,
-                        Description = document.Description,
-                        UploadDate = document.UploadDate,
-                        IsCheck = document.IsCheck,
-                        Views = document.Views,
-                        DocumentTypeName = context.DocumentTypes.FirstOrDefault(p => p.DocumentTypeId == document.DocumentTypeId).DocumentTypeName,
-                        SubjectName = context.Subjects.FirstOrDefault(s => s.SubjectId == document.SubjectId).SubjectName,
-                        FileSource = document.FileSource,
-                        UserName = context.Users.FirstOrDefault(u => u.UserId == document.UserId).Name,
-                        ImagePreview = document.ImagePreview
-                    });
-                }
-                return documentViews;
-            }
-        }
-
         public DocumentViewModel GetDocumentById(int id)
         {
             var res = All.FirstOrDefault(p => p.DocumentId == id);
