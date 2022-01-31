@@ -8,7 +8,7 @@ function AllDocumentsPage() {
     useEffect(() => {
         const getAll = async () => {
             const res = await documentApi.getAllDocument()
-            setDocument(res.data.filter((doc) => doc.isCheck === true).sort((a,b) => b.uploadDate - a.uploadDate))
+            setDocument(res.filter((doc) => doc.isCheck === true).sort((a,b) => b.uploadDate - a.uploadDate))
         }
         getAll()
     },[])

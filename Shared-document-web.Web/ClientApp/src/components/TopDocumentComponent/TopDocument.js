@@ -10,7 +10,8 @@ function TopDocument() {
         const getDocument = async () => {
             const res = await documentApi.getAllDocument()
             const data = res.data
-            setDocuments(data.sort((a,b) => b.views - a.views).slice(0,3))
+            console.log(res)
+            setDocuments(res.sort((a,b) => b.views - a.views).slice(0,3))
         }
         getDocument()
     },[])

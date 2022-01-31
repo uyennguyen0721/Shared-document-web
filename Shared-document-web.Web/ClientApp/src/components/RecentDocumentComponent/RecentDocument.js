@@ -11,7 +11,7 @@ function RecentDocument() {
     useEffect(() => {
         const getAll = async () => {
             const res = await documentApi.getAllDocument()
-            setDocument(res.data.filter((doc) => doc.isCheck === true).sort((a,b) => b.uploadDate - a.uploadDate).slice(0,12))
+            setDocument(res.filter((doc) => doc.isCheck === true).sort((a,b) => b.uploadDate - a.uploadDate).slice(0,12))
         }
         getAll()
     },[])
