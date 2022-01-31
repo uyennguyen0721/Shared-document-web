@@ -1,4 +1,4 @@
-#root .alert {
+#admin .alert {
     border: 0;
     color: $white;
 
@@ -67,7 +67,7 @@
     }
 }
 
-#root .alert-dismissible {
+#admin .alert-dismissible {
     padding-right: 1.25rem;
 
     .close {

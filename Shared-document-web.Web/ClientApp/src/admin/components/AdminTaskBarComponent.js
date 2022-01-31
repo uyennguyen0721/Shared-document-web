@@ -12,7 +12,7 @@ export default function AdminTaskBar() {
         
     else {
     return (
-        <div className="sidebar" data="pink">
+        <div className="sidebar" data="pink" id="admin">
             <div className="sidebar-wrapper ps">
                 <div className="logo">
                     <a className="simple-text logo-mini" href="#">

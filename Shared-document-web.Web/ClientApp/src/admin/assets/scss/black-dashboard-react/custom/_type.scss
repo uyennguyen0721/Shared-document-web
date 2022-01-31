@@ -1,22 +1,21 @@
-body {
+#admin body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  line-height: $headings-line-height;
-
+#admin h1, #admin h2, #admin h3, #admin h4, #admin h5, #admin h6,
+#admin .h1, #admin .h2, #admin .h3, #admin .h4, #admin .h5, #admin .h6 {
+    line-height: $headings-line-height;
 }
-p{
-  font-weight: $font-weight-light;
+#admin p {
+    font-weight: $font-weight-light;
 }
 
-button,
-input,
-optgroup,
-select,
-textarea{
+#admin button,
+#admin input,
+#admin optgroup,
+#admin select,
+#admin textarea {
     font-family: $font-family-base;
 }
 .card{

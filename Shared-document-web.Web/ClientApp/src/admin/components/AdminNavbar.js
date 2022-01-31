@@ -1,7 +1,7 @@
 ﻿import React from "react";
 import classNames from "classnames";
-import { useDispatch, useSelector } from "react-redux";
-import { Redirect, useHistory } from "react-router";
+import { useDispatch} from "react-redux";
+import {useHistory } from "react-router";
 import { useAlert } from 'react-alert'
 import {
   Button,
@@ -12,7 +12,6 @@ import {
   UncontrolledDropdown,
   Input,
   InputGroup,
-  NavbarBrand,
   Navbar,
   NavLink,
   Nav,
@@ -21,12 +20,8 @@ import {
   NavbarToggler,
   ModalHeader,
 } from "reactstrap";
-import "../assets/scss/black-dashboard-react.scss";
-import "../assets/demo/demo.css";
-import "../assets/css/nucleo-icons.css";
 import 'font-awesome/css/font-awesome.min.css';
 import { useLocation } from 'react-router-dom'
-import avatar from "../../assets/images/avatar.jpg"
 function AdminNavbar(props) {
     const alert = useAlert()
     const history = useHistory()
@@ -51,7 +46,6 @@ function AdminNavbar(props) {
         alert.show('Đăng xuất thành công', { type: 'success' })
         history.push('/')
     }
-    const avatar = "/"
     let location = useLocation();
     if (location.pathname.match(/admin/) == null) {
         return null;
@@ -60,7 +54,7 @@ function AdminNavbar(props) {
     else {
         return (
             <>
-                <Navbar className={classNames("navbar-absolute", color)} expand="lg">
+                <Navbar className={classNames("navbar-absolute", color)} expand="lg" id="admin" >
                     <Container fluid>
                         <div className="navbar-wrapper">
                             <div className={classNames("navbar-toggle d-inline", { toggled: props.sidebarOpened, })}
@@ -119,7 +113,7 @@ function AdminNavbar(props) {
                                 <UncontrolledDropdown nav>
                                     <DropdownToggle caret color="default" nav onClick={(e) => e.preventDefault()}>
                                         <div className="photo">
-                                            <img src={avatar} />
+                                            <img src={"/"} />
                                         </div>
                                         <b className="caret d-none d-lg-block d-xl-block" />
                                         <p className="d-lg-none">Đăng xuất</p>
@@ -139,7 +133,7 @@ function AdminNavbar(props) {
                         </Collapse>
                     </Container>
                 </Navbar>
-                <Modal
+                <Modal 
                     modalClassName="modal-search"
                     isOpen={modalSearch}
                     toggle={toggleModalSearch}

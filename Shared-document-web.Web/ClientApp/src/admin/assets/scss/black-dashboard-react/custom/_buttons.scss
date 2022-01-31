@@ -1,5 +1,5 @@
-#root .btn,
-#root .navbar .navbar-nav > a.btn {
+#admin .btn,
+#admin .navbar .navbar-nav > a.btn {
     border-width: $border-thick;
     border: none;
     position: relative;
@@ -103,30 +103,30 @@
 
 // Apply the mixin to the buttons
 // .btn-default { @include btn-styles($default-color, $default-states-color); }
-#root .btn-primary { @include btn-styles($primary, $primary-states);
+#admin .btn-primary { @include btn-styles($primary, $primary-states);
 
               }
-#root .btn-success {
+#admin .btn-success {
     @include btn-styles($success, $success-states);
 }
-#root .btn-info {
+#admin .btn-info {
     @include btn-styles($info, $info-states);
 }
-#root .btn-warning {
+#admin .btn-warning {
     @include btn-styles($warning, $warning-states);
 
     &:not(:disabled):not(.disabled):active {
         color: $white;
     }
 }
-#root .btn-danger {
+#admin .btn-danger {
     @include btn-styles($danger, $danger-states);
 }
-#root .btn-neutral {
+#admin .btn-neutral {
     @include btn-styles($white, $white);
 }
 
-#root .btn {
+#admin .btn {
     &:disabled,
     &[disabled],
     &.disabled {
@@ -134,7 +134,7 @@
         pointer-events: none;
     }
 }
-#root .btn-simple {
+#admin .btn-simple {
     border: $border;
     border-color: $default;
     box-shadow: none;
@@ -142,8 +142,8 @@
     background-color: $transparent-bg;
 }
 
-#root .btn-simple,
-#root .btn-link {
+#admin .btn-simple,
+#admin .btn-link {
     &.disabled,
     &:disabled,
     &[disabled],
@@ -159,10 +159,10 @@
     }
 }
 
-#root .btn:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active {
+#admin .btn:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active {
     box-shadow: 2px 2px 6px rgba(0,0,0,.4);
 }
-#root .btn-link {
+#admin .btn-link {
     border: $none;
     box-shadow: none;
     padding: $padding-base-vertical $padding-base-horizontal;
@@ -176,21 +176,21 @@
     }
 }
 
-#root .btn-lg {
+#admin .btn-lg {
     @include btn-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-base, $border-radius-lg);
 }
-#root .btn-sm {
+#admin .btn-sm {
     @include btn-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-base, $border-radius-sm);
 }
 
-#root .btn-wd {
+#admin .btn-wd {
     min-width: 140px;
 }
-#root .btn-group.select {
+#admin .btn-group.select {
     width: 100%;
 }
 
-#root .btn-group {
+#admin .btn-group {
     .btn.active {
         box-shadow: 2px 2px 6px rgba(0,0,0,.4);
         transform: translateY(-1px);
@@ -199,23 +199,23 @@
 }
 
 
-#root .btn-group.select .btn {
+#admin .btn-group.select .btn {
     text-align: left;
 }
-#root .btn-group.select .caret {
+#admin .btn-group.select .caret {
     position: absolute;
     top: 50%;
     margin-top: -1px;
     right: 8px;
 }
 
-#root .btn-group .btn.active {
+#admin .btn-group .btn.active {
     box-shadow: 2px 2px 6px rgba(0,0,0,.4);
     transform: translateY(-1px);
     -webkit-transform: translateY(-1px);
 }
 
-#root .btn-round {
+#admin .btn-round {
     border-width: $border-thin;
     border-radius: $btn-round-radius;
 
@@ -224,23 +224,23 @@
     }
 }
 
-#root .no-caret {
+#admin .no-caret {
     &.dropdown-toggle::after {
         display: none;
     }
 }
 
-#root .btn-secondary:not(:disabled):not(.disabled):active,
-#root .btn-secondary:not(:disabled):not(.disabled).active,
+#admin .btn-secondary:not(:disabled):not(.disabled):active,
+#admin .btn-secondary:not(:disabled):not(.disabled).active,
 .show > .btn-secondary.dropdown-toggle {
     color: $white;
 }
 
-#root .btn-group label.btn.active {
+#admin .btn-group label.btn.active {
     transform: translateY(0);
     -webkit-transform: translateY(0);
 }
 
-#root .btn + .btn {
+#admin .btn + .btn {
     margin-left: 5px;
 }

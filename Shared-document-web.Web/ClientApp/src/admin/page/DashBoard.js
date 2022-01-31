@@ -38,7 +38,7 @@ function DashBoard() {
                                 <Row>
                                     <Col className="text-left" sm="6">
                                         <h5 className="card-category">Theo năm</h5>
-                                        <CardTitle tag="h2">Tổng doanh thu</CardTitle>
+                                        <CardTitle tag="h2">Tổng lượt truy cập</CardTitle>
                                     </Col>
                                     <Col sm="6">
                                         <ButtonGroup

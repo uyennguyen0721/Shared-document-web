@@ -13,7 +13,7 @@
 
 // Sections
 
-section {
+#admin section {
     //background-color: section-color("primary");
 }
 
@@ -28,15 +28,15 @@ section {
 
 // Shape (svg) fill colors
 @each $color, $value in $theme-colors {
-    .fill-#{$color}  {
+    #admid .fill-#{$color} {
         fill: $value;
     }
 
-    .stroke-#{$color}  {
+    #admid .stroke-#{$color} {
         stroke: $value;
     }
 }
 
-.fill-opacity-8 {
-	fill-opacity: .8;
+#admin .fill-opacity-8 {
+    fill-opacity: .8;
 }
