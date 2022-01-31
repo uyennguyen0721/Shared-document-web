@@ -63,3 +63,7 @@
     height: 50vh;
     padding-left: 10px;
 }
+
+.username-detail {
+    color: var(--primary_color);
+}

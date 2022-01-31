@@ -61,7 +61,7 @@ function DocumentDetail({id}) {
                     <h2>{documentDetail.documentName}</h2>
                     <div className='document-footer-title'>
                         <div className='document-upload-date'>{moment(documentDetail.uploadDate).locale('vn').format('DD/MM/YYYY')}</div>
-                        <div className='document-number-like'>{documentDetail.views} lượt xem</div>
+                        <div className='document-number-like'>Đăng bởi <span className='username-detail'>{documentDetail.userName}</span></div>
                     </div>
                 </div>
                 <div className='download-button'>
