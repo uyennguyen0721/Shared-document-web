@@ -6,6 +6,8 @@ namespace Shared_document_web.BLL
 {
     using DAL;
     using DAL.Models;
+    using Shared_document_web.DAL.ViewModels;
+    using System.Collections.Generic;
 
     public class DocumentSvc : GenericSvc<DocumentRep, Document>
     {
@@ -55,6 +57,11 @@ namespace Shared_document_web.BLL
             var m = _rep.GetDocumentById(id);
             res.Data = m;
             return res;
+        }
+
+        public List<DocumentViewModel> GetAllDocuments()
+        {
+            return _rep.GetAllDocuments();
         }
 
         public SingleRsp UploadDocument(Document document)

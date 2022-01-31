@@ -65,7 +65,7 @@ function DocumentDetail({id}) {
                     </div>
                 </div>
                 <div className='download-button'>
-                    <Button variant="contained" size="small"><a href={`${BaseURL}file/${documentDetail.fileSource}`}>Tải tài liệu</a></Button>
+                    <Button variant="contained" size="small"><a href={`${BaseURL}${documentDetail.fileSource}`}>Tải tài liệu</a></Button>
                 </div>
             </div>
             <div className='document-description'>{documentDetail.description}</div>

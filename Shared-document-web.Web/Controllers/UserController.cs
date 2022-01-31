@@ -85,7 +85,7 @@ namespace Shared_document_web.Web.Controllers
         }
 
         // Đăng nhập
-        [HttpPost("/login")]
+        [HttpPost("login")]
         public IActionResult Login([FromForm] UserLoginReq req)
         {
             var res = new SingleRsp();

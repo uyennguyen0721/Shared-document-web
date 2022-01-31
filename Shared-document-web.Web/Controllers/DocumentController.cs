@@ -35,8 +35,7 @@ namespace Shared_document_web.Web.Controllers
         [HttpGet("get-all")]
         public IActionResult getAllDocuments()
         {
-            var res = new SingleRsp();
-            res.Data = _svc.All;
+            var res = _svc.GetAllDocuments();
             return Ok(res);
         }
 
