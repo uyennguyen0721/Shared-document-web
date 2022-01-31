@@ -95,9 +95,8 @@ namespace Shared_document_web.DAL
             var res = Context.Users
                 .Where(x => x.Username == username && x.Password == password)
                 .Select(u => new {
-                    u.UserId,
-                    u.UserRoleId,
-                    u.Password
+                    u.Name,
+                    u.UserRoleId
                 }).ToList();
             return res;
         }
