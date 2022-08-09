@@ -2,7 +2,7 @@
 - Đồ án môn học Lập trình cơ sở dữ liệu
 - Sử dụng công nghệ ASP.NET Core MVC API, mô hình 3 lớp, ReactJs
 - Server: SQL Server
-- Tình trạng: đang triển khai
+- Tình trạng: hoàn thành
 
 ### Giảng viên hướng dẫn:
 - Giảng viên: Lê Ngọc Hiếu
